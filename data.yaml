@@ -1,0 +1,21 @@
+config:
+  types:
+    - &str !!str ""
+    - &strArr !!seq [""]
+    - &int !!int 0
+    - &intArr !!seq [0]
+    - &bool !!bool false
+    - &boolArr !!seq [false]
+  game: &default
+    title: *str
+    theme: *str
+    genres: *strArr
+    software: *strArr
+<<: *default
+theme: Colony
+genres:
+- Idle
+- Incremental
+software:
+- PICO-8
+- Linux
