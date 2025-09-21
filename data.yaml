@@ -1,7 +1,7 @@
 config:
   types:
-    - &str !!str ""
-    - &strArr !!seq [""]
+    - &str !!str
+    - &strArr !!seq []
     #- &int !!int 0
     #- &intArr !!seq [0]
     #- &bool !!bool false
