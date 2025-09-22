@@ -24,6 +24,10 @@
 	- Wood
 	- Stone
 	- Food
+		- Deficit
+			- Production Decrease
+		- Surplus
+			- Production Bonus
 - Spend Resources
 	- Wood
 		- More Housing

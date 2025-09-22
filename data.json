@@ -30,7 +30,14 @@
 		"Earn Resources": {
 			"Wood": null,
 			"Stone": null,
-			"Food": null
+			"Food": {
+				"Deficit": {
+					"Production Decrease": null
+				},
+				"Surplus": {
+					"Production Bonus": null
+				}
+			}
 		},
 		"Spend Resources": {
 			"Wood": {
