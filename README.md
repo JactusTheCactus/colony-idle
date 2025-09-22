@@ -4,7 +4,7 @@ Colony
 ## Genres
 - Idle
 - Incremental
-software:
+## Software
 - PICO-8
 - Linux
 - VSCode
