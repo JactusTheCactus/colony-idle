@@ -13,10 +13,14 @@
 ## Concept
 ```yml
 Employ Colonists:
-- Lumberjack
-- Miner
-- Hunter (Less food, but faster)
-- Farmer (More food, but slower)
+  Lumberjack: null
+  Miner: null
+  Hunter:
+  - Less Food
+  - More Speed
+  Farmer:
+  - More Food
+  - Less Speed
 Earn Resources:
 - Wood
 - Stone
