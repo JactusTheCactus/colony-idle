@@ -1,6 +1,11 @@
 Colony Idle/Incremental
-!!set
-software: null
-genres: null
-concept: null
-theme: null
+theme: Colony
+genres:
+- Idle
+- Incremental
+software:
+- PICO-8
+- Linux
+- VSCode
+- Lua
+concept: {}
