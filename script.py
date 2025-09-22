@@ -14,7 +14,7 @@ with open(f"data.json", "w") as f:
 with open(f"README.md", "w") as f:
 	data = "\n".join([
 		data["title"],
-		stringify({data[d] for d in data.keys() if d not in ["title"]}),
+		stringify({k: v for k, v in data.items() if k not in ["title"]}),
 	])
 	print(data)
 	f.write(data)
