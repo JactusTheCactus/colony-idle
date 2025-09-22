@@ -4,5 +4,5 @@ PY := python3
 
 all : build
 
-build : $(wildcard *.yaml)
+build : $(wildcard *.yaml *.py)
 	@$(PY) script.py
