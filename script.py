@@ -6,7 +6,7 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 data = yaml.dump(data,sort_keys=False)
 if not data.title:
-	data.title = "".join([
+	data.title = " ".join([
 		data.theme,
 		data.genres[0]
 	])
