@@ -13,8 +13,8 @@
 ## Concept
 ```yml
 Employ Colonists:
-  Lumberjack: null
-  Miner: null
+  Lumberjack:
+  Miner:
   Hunter:
   - Less Food
   - More Speed
