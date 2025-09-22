@@ -18,7 +18,7 @@ with open(f"README.md", "w") as f:
 		data["theme"],
 		"## Genres",
 		"\n".join(list(map(
-					lambda x: f"- {x}",data["genres"]
+			lambda x: f"- {x}",data["genres"]
 		))),
 		stringify({
 			k: v for k, v in data.items() if k not in [
