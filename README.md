@@ -10,9 +10,11 @@
 - VSCode
 - Lua
 ## Concept
+```yml
 runTasks:
 - Chop Trees
 - Mine Stone
 earnResources:
 - Wood
 - Stone
+```
