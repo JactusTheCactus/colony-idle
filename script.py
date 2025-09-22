@@ -15,7 +15,9 @@ with open(f"README.md", "w") as f:
 	data = "\n".join([
 		"# " + data["title"],
 		"## Theme",
-		data["theme"],
+		"\n".join(list(map(
+			lambda x: f"- {x}",data["theme"]
+		))),
 		"## Genres",
 		"\n".join(list(map(
 			lambda x: f"- {x}",data["genres"]
