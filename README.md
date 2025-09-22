@@ -12,25 +12,25 @@
 - Lua
 ## Concept
 Employ Colonists
-	Lumberjack
-	Miner
-	Hunter
-		Less Food
-		More Speed
-	Farmer
-		More Food
-		Less Speed
+	- umberjack
+	- iner
+	- unter
+		- ess Food
+		- ore Speed
+	- armer
+		- ore Food
+		- ess Speed
 Earn Resources
-	Wood
-	Stone
-	Food
+	- ood
+	- tone
+	- ood
 Spend Resources
-	Wood
-		More Housing
-		Bigger Wood Storage
-	Stone
-		Better Tools
-		Bigger Stone Storage
-	Food
-		More Colonists
-			Limited By Housing Capacity
+	- ood
+		- ore Housing
+		- igger Wood Storage
+	- tone
+		- etter Tools
+		- igger Stone Storage
+	- ood
+		- ore Colonists
+			- imited By Housing Capacity
