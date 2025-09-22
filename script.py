@@ -33,7 +33,7 @@ with open(f"README.md", "w") as f:
 			"",
 			stringify(
 				data["concept"],
-				flags=re.G
+				flags=re.M
 			)
 		),
 		"```"
