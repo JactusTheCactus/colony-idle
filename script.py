@@ -23,7 +23,6 @@ with open(f"README.md", "w") as f:
 		"## Software",
 		listToBullets(data["software"]),
 		"## Concept",
-		"```yml",
 		re.sub(
 			r":(?: null)?$",
 			"",
@@ -33,8 +32,7 @@ with open(f"README.md", "w") as f:
 				stringify(data["concept"])
 			),
 			flags=re.M
-		),
-		"```"
+		)
 	])
 	print(data)
 	f.write(data)
