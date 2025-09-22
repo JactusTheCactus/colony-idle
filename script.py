@@ -13,7 +13,7 @@ with open(f"README.md", "w") as f:
 		f"# {data['title']}",
 		", ".join(list(map(
 			lambda x: f"`#{x}`",
-			data["genres"]
+			sorted(data["genres"])
 		))),
 		"## Theme",
 		listToBullets(data["theme"]),
