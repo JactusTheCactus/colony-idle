@@ -1,4 +1,6 @@
 import json,yaml
+def stringify(obj):
+	return yaml.dump(obj,sort_keys=False).strip()
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
 del data["config"]
@@ -12,12 +14,7 @@ with open(f"data.json", "w") as f:
 with open(f"README.md", "w") as f:
 	data = "\n".join([
 		str(data),
-		yaml
-			.dump(
-				data,
-				sort_keys = False
-			)
-			.strip(),
+		stringify(data),
 	])
 	print(data)
 	f.write(data)
