@@ -1,18 +1,16 @@
 config:
   types:
     - &str !!str
-    - &strArr !!seq []
-    #- &int !!int 0
-    #- &intArr !!seq [0]
-    #- &bool !!bool false
-    #- &boolArr !!seq [false]
-    - &arr !!seq []
+    - &int !!int 0
+    - &bool !!bool false
+    - &arr !!seq
+    - &obj !!map
   game: &default
     title: *str
     theme: *str
-    genres: *strArr
-    software: *strArr
-    concept: *arr
+    genres: *arr
+    software: *arr
+    concept: *obj
 <<: *default
 theme: Colony
 genres:
