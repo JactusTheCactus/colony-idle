@@ -19,4 +19,5 @@ with open(f"README.md", "w") as f:
 			)
 			.strip(),
 	])
+	print(data)
 	f.write(data)
