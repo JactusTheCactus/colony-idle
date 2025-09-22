@@ -1,6 +1,6 @@
 config:
   types:
-    - &str !!str
+    - &str !!str ""
     - &int !!int 0
     - &bool !!bool false
     - &arr !!seq []
