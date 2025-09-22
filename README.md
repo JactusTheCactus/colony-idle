@@ -11,7 +11,6 @@
 - VSCode
 - Lua
 ## Concept
-```yml
 Employ Colonists
 	Lumberjack
 	Miner
@@ -35,4 +34,3 @@ Spend Resources
 	Food
 		More Colonists
 			Limited By Housing Capacity
-```
