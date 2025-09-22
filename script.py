@@ -29,7 +29,11 @@ with open(f"README.md", "w") as f:
 			re.sub(
 				r" {2}",
 				"\t",
-				stringify(data["concept"])
+				re.sub(
+					r"\t([^\t])",
+					"\t- \1",
+					stringify(data["concept"])
+				)
 			),
 			flags=re.M
 		)
