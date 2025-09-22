@@ -1,9 +1,10 @@
-# Colony Idle / Incremental
+# Colony Idle / Incremental / Simulator
 ## Theme
 - Colony
 ## Genres
 - Idle
 - Incremental
+- Simulator
 ## Software
 - PICO-8
 - Linux
@@ -14,8 +15,8 @@
 Employ Colonists:
 - Lumberjack
 - Miner
-- Hunter
-- Farmer
+- Hunter (Less food, but faster)
+- Farmer (More food, but slower)
 Earn Resources:
 - Wood
 - Stone
@@ -23,10 +24,10 @@ Earn Resources:
 Spend Resources:
   Wood:
   - More Housing
-  - Higher Wood Cap.
+  - Bigger Wood Storage
   Stone:
   - Better Tools
-  - Higher Stone Cap.
+  - Bigger Stone Storage
   Food:
-  - More Colonists (Limited By Housing Cap.)
+  - More Colonists (Limited By Housing Capacity)
 ```
