@@ -22,7 +22,7 @@ with open(f"README.md", "w") as f:
 		))),
 		"## Software",
 		"\n".join([
-			f"### {k}\n`{v}`"
+			f"- {k}: `{v}`"
 			for k,v
 			in data["software"].items()
 		]),
