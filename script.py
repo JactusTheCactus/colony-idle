@@ -10,7 +10,7 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
 	data = "\n".join([
-		f"# data['title']",
+		f"# {data['title']}",
 		", ".join(list(map(
 			lambda x: f"`#{x}`",
 			data["genres"]
