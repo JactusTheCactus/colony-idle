@@ -8,12 +8,12 @@
 		"Incremental",
 		"Simulator"
 	],
-	"software": [
-		"PICO-8 (Engine)",
-		"Linux (OS)",
-		"VSCode (IDE)",
-		"Lua (Language)"
-	],
+	"software": {
+		"PICO-8": "Engine",
+		"Linux": "OS",
+		"VSCode": "IDE",
+		"Lua": "Language"
+	},
 	"concept": {
 		"Employ Colonists": {
 			"Lumberjack": null,
