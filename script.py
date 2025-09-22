@@ -24,16 +24,17 @@ with open(f"README.md", "w") as f:
 		"\n".join(list(map(
 			lambda x: f"- {x}",data["software"]
 		))),
+		"## Concept",
+		stringify(data["concept"]),
 		stringify({
 			k: v for k, v in data.items() if k not in [
 				"title",
 				"theme",
 				"genres",
-				"software"
+				"software",
+				"concept"
 			]
-		}),
-		"## Concept",
-		stringify(data["concept"])
+		})
 	])
 	print(data)
 	f.write(data)
