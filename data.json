@@ -18,32 +18,34 @@
 		"Employ Colonists": {
 			"Lumberjack": null,
 			"Miner": null,
-			"Hunter": [
-				"Less Food",
-				"More Speed"
-			],
-			"Farmer": [
-				"More Food",
-				"Less Speed"
-			]
+			"Hunter": {
+				"Less Food": null,
+				"More Speed": null
+			},
+			"Farmer": {
+				"More Food": null,
+				"Less Speed": null
+			}
 		},
-		"Earn Resources": [
-			"Wood",
-			"Stone",
-			"Food"
-		],
+		"Earn Resources": {
+			"Wood": null,
+			"Stone": null,
+			"Food": null
+		},
 		"Spend Resources": {
-			"Wood": [
-				"More Housing",
-				"Bigger Wood Storage"
-			],
-			"Stone": [
-				"Better Tools",
-				"Bigger Stone Storage"
-			],
-			"Food": [
-				"More Colonists (Limited By Housing Capacity)"
-			]
+			"Wood": {
+				"More Housing": null,
+				"Bigger Wood Storage": null
+			},
+			"Stone": {
+				"Better Tools": null,
+				"Bigger Stone Storage": null
+			},
+			"Food": {
+				"More Colonists": {
+					"Limited By Housing Capacity": null
+				}
+			}
 		}
 	}
 }
