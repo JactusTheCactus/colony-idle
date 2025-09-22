@@ -17,7 +17,7 @@ with open(f"README.md", "w") as f:
 		))),
 		"## Theme",
 		"\n".join(list(map(
-			lambda x: f"- {x}",
+			lambda x: f"- `{x}`",
 			data["theme"]
 		))),
 		"## Software",
