@@ -1,6 +1,6 @@
-# Colony Idle/Incremental
+# Colony Idle / Incremental
 ## Theme
-Colony
+- Colony
 ## Genres
 - Idle
 - Incremental
@@ -10,4 +10,9 @@ Colony
 - VSCode
 - Lua
 ## Concept
-{}
+runTasks:
+- Chop Trees
+- Mine Stone
+earnResources:
+- Wood
+- Stone

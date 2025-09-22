@@ -1,6 +1,8 @@
 {
-	"title": "Colony Idle/Incremental",
-	"theme": "Colony",
+	"title": "Colony Idle / Incremental",
+	"theme": [
+		"Colony"
+	],
 	"genres": [
 		"Idle",
 		"Incremental"
@@ -11,5 +13,14 @@
 		"VSCode",
 		"Lua"
 	],
-	"concept": {}
+	"concept": {
+		"runTasks": [
+			"Chop Trees",
+			"Mine Stone"
+		],
+		"earnResources": [
+			"Wood",
+			"Stone"
+		]
+	}
 }
