@@ -13,7 +13,7 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
 	data = "\n".join([
-		data["title"],
+		"# "+data["title"],
 		stringify({k: v for k, v in data.items() if k not in ["title"]}),
 	])
 	print(data)
