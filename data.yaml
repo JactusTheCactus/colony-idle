@@ -4,7 +4,7 @@ config:
     - &int !!int 0
     - &bool !!bool false
     - &arr !!seq []
-    - &obj !!map
+    - &obj !!map {}
   game: &default
     title: *str
     theme: *str
