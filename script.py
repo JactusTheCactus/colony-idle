@@ -11,13 +11,12 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
 	data = "\n".join([
-		"```yaml",
+		data,
 		yaml
 			.dump(
 				data,
 				sort_keys = False
 			)
 			.strip(),
-		"```",
 	])
 	f.write(data)
