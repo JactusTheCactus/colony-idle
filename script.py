@@ -13,11 +13,11 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
 	data = "\n".join([
-		"# "+data["title"],
+		"# " + data["title"],
 		"## Theme",
 		data["theme"],
 		"## Genres",
-		data["genres"],
+		"\n".join(data["genres"]),
 		stringify({
 			k: v for k, v in data.items() if k not in [
 				"title",
