@@ -23,8 +23,10 @@ Earn Resources:
 Spend Resources:
   Wood:
   - More Housing
+  - Higher Wood Cap.
   Stone:
   - Better Tools
+  - Higher Stone Cap.
   Food:
   - More Colonists (Limited By Housing Cap.)
 ```
