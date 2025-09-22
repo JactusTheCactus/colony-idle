@@ -9,6 +9,6 @@ Colony
 - Linux
 - VSCode
 - Lua
-concept: {}
 ## Concept
+{}
 {}
