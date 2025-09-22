@@ -16,7 +16,10 @@ with open(f"README.md", "w") as f:
 			sorted(data["genres"])
 		))),
 		"## Theme",
-		listToBullets(data["theme"]),
+		"\n".join(list(map(
+			lambda x: f"- {x}",
+			data["theme"]
+		))),
 		"## Software",
 		"\n".join([
 			f"### {k}\n`{v}`"
