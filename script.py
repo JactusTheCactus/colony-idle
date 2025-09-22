@@ -27,7 +27,9 @@ with open(f"README.md", "w") as f:
 			lambda x: f"- {x}",data["software"]
 		))),
 		"## Concept",
-		stringify(data["concept"])
+		"```yml",
+		stringify(data["concept"]),
+		"```"
 	])
 	print(data)
 	f.write(data)
