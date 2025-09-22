@@ -6,11 +6,13 @@ config:
     #- &intArr !!seq [0]
     #- &bool !!bool false
     #- &boolArr !!seq [false]
+    - &arr !!seq []
   game: &default
     title: *str
     theme: *str
     genres: *strArr
     software: *strArr
+    concept: *arr
 <<: *default
 theme: Colony
 genres:
