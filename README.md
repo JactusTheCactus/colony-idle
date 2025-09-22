@@ -12,27 +12,27 @@
 - Lua
 ## Concept
 ```yml
-Employ Colonists:
+Employ Colonists
   Lumberjack
   Miner
-  Hunter:
+  Hunter
     Less Food
     More Speed
-  Farmer:
+  Farmer
     More Food
     Less Speed
-Earn Resources:
+Earn Resources
   Wood
   Stone
   Food
-Spend Resources:
-  Wood:
+Spend Resources
+  Wood
     More Housing
     Bigger Wood Storage
-  Stone:
+  Stone
     Better Tools
     Bigger Stone Storage
-  Food:
-    More Colonists:
+  Food
+    More Colonists
       Limited By Housing Capacity
 ```
