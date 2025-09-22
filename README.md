@@ -11,7 +11,7 @@
 - VSCode
 - Lua
 ## Concept
-Employ Colonists
+- Employ Colonists
 	- Lumberjack
 	- Miner
 	- Hunter
@@ -20,11 +20,11 @@ Employ Colonists
 	- Farmer
 		- More Food
 		- Less Speed
-Earn Resources
+- Earn Resources
 	- Wood
 	- Stone
 	- Food
-Spend Resources
+- Spend Resources
 	- Wood
 		- More Housing
 		- Bigger Wood Storage
