@@ -41,5 +41,4 @@ with open(f"README.md", "w") as f:
 			flags=re.M
 		)
 	])
-	print(data)
 	f.write(data)
