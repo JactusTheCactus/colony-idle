@@ -6,14 +6,14 @@
 - Incremental
 - Simulator
 ## Software
-- PICO-8
-	- Engine
-- Linux
-	- OS
-- VSCode
-	- IDE
-- Lua
-	- Language
+- Engine
+	- PICO-8
+- OS
+	- Linux
+- IDE
+	- VSCode
+- Language
+	- Lua
 ## Concept
 - Employ Colonists
 	- Lumberjack

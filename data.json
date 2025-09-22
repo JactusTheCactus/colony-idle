@@ -9,10 +9,10 @@
 		"Simulator"
 	],
 	"software": {
-		"PICO-8": "Engine",
-		"Linux": "OS",
-		"VSCode": "IDE",
-		"Lua": "Language"
+		"Engine": "PICO-8",
+		"OS": "Linux",
+		"IDE": "VSCode",
+		"Language": "Lua"
 	},
 	"concept": {
 		"Employ Colonists": {
