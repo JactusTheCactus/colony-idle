@@ -1,7 +1,5 @@
 # Colony Idle
-`#Idle`
-`#Incremental`
-`#Simulator`
+`#Idle` `#Incremental` `#Simulator`
 ## Theme
 - `Colony`
 ## Software
