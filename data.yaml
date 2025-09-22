@@ -19,10 +19,10 @@ genres:
 - Incremental
 - Simulator
 software:
-- PICO-8 (Engine)
-- Linux (OS)
-- VSCode (IDE)
-- Lua (Language)
+  PICO-8: Engine
+  Linux: OS
+  VSCode: IDE
+  Lua: Language
 concept:
   Employ Colonists:
     Lumberjack:
