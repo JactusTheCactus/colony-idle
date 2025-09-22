@@ -28,7 +28,7 @@ with open(f"README.md", "w") as f:
 			"",
 			re.sub(
 				r"\t([^\t])",
-				"\t- \1",
+				r"\t- \1",
 				re.sub(
 					r" {2}",
 					"\t",
