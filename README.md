@@ -1,4 +1,4 @@
-# Colony Idle / Incremental / Simulator
+# Colony Idle
 ## Theme
 - Colony
 ## Genres
