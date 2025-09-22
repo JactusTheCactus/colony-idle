@@ -1,9 +1,5 @@
 # Colony Idle
-`#Idle`, `#Incremental`, `#Simulator`
-## Theme
-```
-Colony
-```
+`#Colony`, `#Idle`, `#Incremental`, `#Simulator`
 ## Software
 |Engine|OS|IDE|Language|
 |:-:|:-:|:-:|:-:|
