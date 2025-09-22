@@ -1,10 +1,7 @@
 # Colony Idle
+`Idle`, `Incremental`, `Simulator`
 ## Theme
 - Colony
-## Genres
-- Idle
-- Incremental
-- Simulator
 ## Software
 - Engine: `PICO-8`
 - OS: `Linux`
