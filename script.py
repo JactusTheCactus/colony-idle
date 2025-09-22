@@ -20,11 +20,16 @@ with open(f"README.md", "w") as f:
 		"\n".join(list(map(
 			lambda x: f"- {x}",data["genres"]
 		))),
+		"## Software",
+		"\n".join(list(map(
+			lambda x: f"- {x}",data["software"]
+		))),
 		stringify({
 			k: v for k, v in data.items() if k not in [
 				"title",
 				"theme",
 				"genres",
+				"software"
 			]
 		}),
 	])
