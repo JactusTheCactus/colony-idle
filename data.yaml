@@ -12,6 +12,7 @@ config:
     software: *arr
     concept: *obj
 <<: *default
+title: Colony Idle
 theme:
 - Colony
 genres:
