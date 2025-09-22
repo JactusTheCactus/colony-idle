@@ -6,7 +6,7 @@ with open("data.yaml", "r") as f:
 del data["config"]
 if not getattr(data,"title",None):
 	data["title"] = " ".join([
-		data["theme"],
+		" & ".join(data["theme"]),
 		"/".join(data["genres"])
 	])
 with open(f"data.json", "w") as f:
