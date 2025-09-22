@@ -21,7 +21,7 @@ with open(f"README.md", "w") as f:
 		"## Genres",
 		listToBullets(data["genres"]),
 		"## Software",
-		listToBullets([f"{k}\n\t- {v}" for k,v in data["software"].items()]),
+		listToBullets([f"{k} : `{v}`" for k,v in data["software"].items()]),
 		"## Concept",
 		re.sub(
 			r":(?: null)?$",
