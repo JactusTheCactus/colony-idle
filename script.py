@@ -12,7 +12,7 @@ if not getattr(data,"title",None):
 with open(f"README.md", "w") as f:
 	print(data)
 	data = yaml.dump(data,sort_keys=False)
-	print(data{
+	print(data)
 	f.write("\n".join([
 		"```yaml",
 		data.strip(),
