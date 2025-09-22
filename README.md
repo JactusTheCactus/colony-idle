@@ -1,9 +1,9 @@
 # Colony Idle/Incremental
 ## Theme
 Colony
-genres:
-- Idle
-- Incremental
+## Genres
+Idle
+Incremental
 software:
 - PICO-8
 - Linux
