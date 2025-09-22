@@ -10,10 +10,14 @@ if not getattr(data,"title",None):
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
-	data = yaml.dump(data,sort_keys=False)
 	data = "\n".join([
 		"```yaml",
-		data.strip(),
+		yaml
+			.dump(
+				data,
+				sort_keys = False
+			)
+			.strip(),
 		"```",
 	])
 	f.write(data)
