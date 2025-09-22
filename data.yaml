@@ -3,7 +3,7 @@ config:
     - &str !!str
     - &int !!int 0
     - &bool !!bool false
-    - &arr !!seq
+    - &arr !!seq []
     - &obj !!map
   game: &default
     title: *str
