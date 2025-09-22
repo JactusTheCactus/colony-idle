@@ -32,6 +32,8 @@ with open(f"README.md", "w") as f:
 				"software"
 			]
 		}),
+		"## Concept",
+		stringify(data["concept"])
 	])
 	print(data)
 	f.write(data)
