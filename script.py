@@ -7,7 +7,7 @@ with open(f"data.json", "w") as f:
 if not data.title:
 	data.title = " ".join([
 		data.theme,
-		data.genres[0]
+		"/".join(data.genres)
 	])
 with open(f"README.md", "w") as f:
 	data = yaml.dump(data,sort_keys=False)
