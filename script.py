@@ -6,8 +6,8 @@ with open("data.yaml", "r") as f:
 del data["config"]
 if not getattr(data,"title",None):
 	data["title"] = " ".join([
-		" & ".join(data["theme"]),
-		" / ".join(data["genres"])
+		data["theme"][0],
+		data["genres"][0]
 	])
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
