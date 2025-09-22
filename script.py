@@ -6,11 +6,6 @@ def listToBullets(arr):
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
 del data["config"]
-if not getattr(data,"title",None):
-	data["title"] = " ".join([
-		data["theme"][0],
-		data["genres"][0]
-	])
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
