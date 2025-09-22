@@ -6,9 +6,9 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 if not getattr(data,"title",None):
 	print(data)
-	data.title = " ".join([
-		data.theme,
-		"/".join(data.genres)
+	data["title"] = " ".join([
+		data["theme"],
+		"/".join(data["genres"])
 	])
 with open(f"README.md", "w") as f:
 	data = yaml.dump(data,sort_keys=False)
