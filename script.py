@@ -10,11 +10,12 @@ if not getattr(data,"title",None):
 		"/".join(data["genres"])
 	])
 with open(f"README.md", "w") as f:
-	print(data)
 	data = yaml.dump(data,sort_keys=False)
 	print(data)
-	f.write("\n".join([
+	data = "\n".join([
 		"```yaml",
 		data.strip(),
 		"```",
-	]))
+	])
+	print(data)
+	f.write(data)
