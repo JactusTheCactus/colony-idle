@@ -31,8 +31,10 @@ with open(f"README.md", "w") as f:
 		re.sub(
 			r"\s*null\s*$",
 			"",
-			stringify(data["concept"],
-			flags=re.G)
+			stringify(
+				data["concept"],
+				flags=re.G
+			)
 		),
 		"```"
 	])
