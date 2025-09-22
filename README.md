@@ -11,5 +11,3 @@ Colony
 - Lua
 ## Concept
 {}
-***
-{}
