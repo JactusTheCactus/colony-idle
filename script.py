@@ -27,13 +27,14 @@ with open(f"README.md", "w") as f:
 			r":(?: null)?$",
 			"",
 			re.sub(
-				r"\t([^\t])",
-				r"\t- \1",
+				r"(\t|^)([^\t])",
+				r"\1- \2",
 				re.sub(
 					r" {2}",
 					"\t",
 					stringify(data["concept"])
-				)
+				),
+				flags=re.M
 			),
 			flags=re.M
 		)
