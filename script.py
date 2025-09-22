@@ -5,7 +5,8 @@ del data["config"]
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 data = yaml.dump(data,sort_keys=False)
-data.title = data.title if data.title else "".join([
+if not data.title:
+	data.title = data.title if data.title else "".join([
 	data.theme,
 	data.genres[0]
 ])
