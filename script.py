@@ -11,7 +11,7 @@ with open(f"data.json", "w") as f:
 with open(f"README.md", "w") as f:
 	data = "\n".join([
 		f"# {data['title']}",
-		"\n".join(list(map(
+		" ".join(list(map(
 			lambda x: f"`#{x}`",
 			sorted(data["genres"])
 		))),
