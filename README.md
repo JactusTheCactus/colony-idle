@@ -25,7 +25,7 @@
 	- Stone
 	- Food
 		- Deficit
-			- Production Decrease
+			- Production Penalty
 		- Surplus
 			- Production Bonus
 - Spend Resources

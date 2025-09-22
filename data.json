@@ -32,7 +32,7 @@
 			"Stone": null,
 			"Food": {
 				"Deficit": {
-					"Production Decrease": null
+					"Production Penalty": null
 				},
 				"Surplus": {
 					"Production Bonus": null
