@@ -1,4 +1,4 @@
-import json,yaml
+import json,yaml,re
 def stringify(obj):
 	return yaml.dump(obj,sort_keys=False).strip()
 with open("data.yaml", "r") as f:
@@ -28,7 +28,12 @@ with open(f"README.md", "w") as f:
 		))),
 		"## Concept",
 		"```yml",
-		stringify(data["concept"]),
+		re.sub(
+			r"\s*null\s*$",
+			"",
+			stringify(data["concept"],
+			flags=re.G)
+		),
 		"```"
 	])
 	print(data)
