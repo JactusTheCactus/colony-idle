@@ -6,6 +6,5 @@ DATA := data.yaml
 README := README.md
 
 all : build
-build : $(README)
-$(README) : $(SCRIPT) $(DATA)
+build :
 	@$(PY) $(SCRIPT)
