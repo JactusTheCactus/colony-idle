@@ -25,7 +25,7 @@ with open(f"README.md", "w") as f:
 		"## Concept",
 		"```yml",
 		re.sub(
-			r"\s*null\s*$",
+			r": null$",
 			"",
 			stringify(data["concept"]),
 			flags=re.M
