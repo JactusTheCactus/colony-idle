@@ -7,5 +7,5 @@ DATA := data.yaml
 
 all : build
 
-build : $(DATA) $(SCRIPT)
+build :
 	@$(PY) $(SCRIPT)
