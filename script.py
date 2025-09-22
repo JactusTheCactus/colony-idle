@@ -6,10 +6,10 @@ with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 data = yaml.dump(data,sort_keys=False)
 if not data.title:
-	data.title = data.title if data.title else "".join([
-	data.theme,
-	data.genres[0]
-])
+	data.title = "".join([
+		data.theme,
+		data.genres[0]
+	])
 with open(f"README.md", "w") as f:
 	f.write("\n".join([
 		"```yaml",
