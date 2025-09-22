@@ -5,10 +5,8 @@
 ## Software
 |||
 |-:|:-|
-|__Engine__|`PICO-8`|
-|__OS__|`Linux`|
-|__IDE__|`VSCode`|
-|__Language__|`Lua`|
+Engine|OS|IDE|Language
+PICO-8|Linux|VSCode|Lua
 ## Concept
 - Employ Colonists
 	- Lumberjack
