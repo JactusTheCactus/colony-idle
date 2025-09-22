@@ -1,5 +1,4 @@
 # Colony Idle/Incremental
-theme: Colony
 genres:
 - Idle
 - Incremental
