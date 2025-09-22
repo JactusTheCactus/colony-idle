@@ -28,7 +28,7 @@ with open(f"README.md", "w") as f:
 				in data["software"].items()
 			])+"|",
 			"|"+"|".join([
-				"-"
+				":-:"
 				for k,v
 				in data["software"].items()
 			])+"|",
