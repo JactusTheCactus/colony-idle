@@ -5,9 +5,9 @@
 Colony
 ```
 ## Software
-| Engine | OS    | IDE    | Language |
-|:------:|:-----:|:------:|:--------:|
-| PICO-8 | Linux | VSCode | Lua      |
+|Engine|OS|IDE|Language|
+|:-:|:-:|:-:|:-:|
+|PICO-8|Linux|VSCode|Lua|
 ## Concept
 - Employ Colonists
 	- Lumberjack
