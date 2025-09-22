@@ -16,10 +16,12 @@ with open(f"data.json", "w") as f:
 with open(f"README.md", "w") as f:
 	data = "\n".join([
 		"# " + data["title"],
+		", ".join(list(map(
+			lambda x: f"`{x}`",
+			data["genres"]
+		))),
 		"## Theme",
 		listToBullets(data["theme"]),
-		"## Genres",
-		listToBullets(data["genres"]),
 		"## Software",
 		listToBullets([f"{k}: `{v}`" for k,v in data["software"].items()]),
 		"## Concept",
