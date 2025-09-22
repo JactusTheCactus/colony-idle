@@ -15,10 +15,10 @@
 	- Lumberjack
 	- Miner
 	- Hunter
-		- Less Food
+		- Less Yield
 		- More Speed
 	- Farmer
-		- More Food
+		- More Yield
 		- Less Speed
 - Earn Resources
 	- Wood

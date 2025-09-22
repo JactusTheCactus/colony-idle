@@ -19,11 +19,11 @@
 			"Lumberjack": null,
 			"Miner": null,
 			"Hunter": {
-				"Less Food": null,
+				"Less Yield": null,
 				"More Speed": null
 			},
 			"Farmer": {
-				"More Food": null,
+				"More Yield": null,
 				"Less Speed": null
 			}
 		},
