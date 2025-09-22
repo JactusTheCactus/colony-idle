@@ -24,9 +24,8 @@ with open(f"README.md", "w") as f:
 		"|||",
 		"|-:|:-|",
 		"\n".join([
-			f"|__{k}__|`{v}`|"
-			for k,v
-			in data["software"].items()
+			"|".join([f"{k}" for k,v in data["software"].items()]),
+			"|".join([f"{v}" for k,v in data["software"].items()])
 		]),
 		"## Concept",
 		re.sub(
