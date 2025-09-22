@@ -6,10 +6,10 @@
 - Incremental
 - Simulator
 ## Software
-- PICO-8
-- Linux
-- VSCode
-- Lua
+- PICO-8 (Engine)
+- Linux (OS)
+- VSCode (IDE)
+- Lua (Language)
 ## Concept
 - Employ Colonists
 	- Lumberjack
@@ -36,5 +36,5 @@
 		- Better Tools
 		- Bigger Stone Storage
 	- Food
-		- More Colonists
+		- Birth Colonists
 			- Limited By Housing Capacity

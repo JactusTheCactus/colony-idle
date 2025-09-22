@@ -9,10 +9,10 @@
 		"Simulator"
 	],
 	"software": [
-		"PICO-8",
-		"Linux",
-		"VSCode",
-		"Lua"
+		"PICO-8 (Engine)",
+		"Linux (OS)",
+		"VSCode (IDE)",
+		"Lua (Language)"
 	],
 	"concept": {
 		"Employ Colonists": {
@@ -49,7 +49,7 @@
 				"Bigger Stone Storage": null
 			},
 			"Food": {
-				"More Colonists": {
+				"Birth Colonists": {
 					"Limited By Housing Capacity": null
 				}
 			}
