@@ -7,6 +7,9 @@
 	],
 	"software": [
 		"PICO-8",
-		"Linux"
-	]
+		"Linux",
+		"VSCode",
+		"Lua"
+	],
+	"concept": {}
 }

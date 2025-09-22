@@ -1,5 +1,5 @@
 ```yaml
-title: ''
+title: Colony Idle/Incremental
 theme: Colony
 genres:
 - Idle
@@ -7,4 +7,7 @@ genres:
 software:
 - PICO-8
 - Linux
+- VSCode
+- Lua
+concept: {}
 ```
