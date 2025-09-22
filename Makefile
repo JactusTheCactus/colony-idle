@@ -2,7 +2,10 @@
 
 PY := python3
 
+SCRIPT := script.py
+DATA := data.yaml
+
 all : build
 
-build : data.yaml script.py
-	@$(PY) script.py
+build : $(DATA) $(SCRIPT)
+	@$(PY) $(SCRIPT)
