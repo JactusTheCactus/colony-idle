@@ -5,10 +5,12 @@
 ## Theme
 - `Colony`
 ## Software
-- Engine: `PICO-8`
-- OS: `Linux`
-- IDE: `VSCode`
-- Language: `Lua`
+|||
+|-:|:-|
+|__Engine__|`PICO-8`|
+|__OS__|`Linux`|
+|__IDE__|`VSCode`|
+|__Language__|`Lua`|
 ## Concept
 - Employ Colonists
 	- Lumberjack
