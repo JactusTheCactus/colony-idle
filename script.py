@@ -19,7 +19,9 @@ with open(f"README.md", "w") as f:
 		listToBullets(data["theme"]),
 		"## Software",
 		"\n".join([
-			f"### {k}\n`{v}`" for k,v in data["software"].items()
+			f"### {k}\n`{v}`"
+			for k,v
+			in data["software"].items()
 		]),
 		"## Concept",
 		re.sub(
