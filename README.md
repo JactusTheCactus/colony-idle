@@ -11,10 +11,10 @@
 - Lua
 ## Concept
 ```yml
-runTasks:
+run tasks:
 - Chop Trees
 - Mine Stone
-earnResources:
+earn resources:
 - Wood
 - Stone
 ```
