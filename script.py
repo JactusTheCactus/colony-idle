@@ -16,10 +16,13 @@ with open(f"README.md", "w") as f:
 		"# "+data["title"],
 		"## Theme",
 		data["theme"],
+		"## Genres",
+		data["genres"],
 		stringify({
 			k: v for k, v in data.items() if k not in [
 				"title",
-				"theme"
+				"theme",
+				"genres",
 			]
 		}),
 	])
