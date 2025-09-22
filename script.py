@@ -5,14 +5,14 @@ del data["config"]
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 if not getattr(data,"title",None):
-	print(data)
 	data["title"] = " ".join([
 		data["theme"],
 		"/".join(data["genres"])
 	])
-	print(data)
 with open(f"README.md", "w") as f:
+	print(data)
 	data = yaml.dump(data,sort_keys=False)
+	print(data{
 	f.write("\n".join([
 		"```yaml",
 		data.strip(),
