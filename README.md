@@ -13,26 +13,26 @@
 ## Concept
 ```yml
 Employ Colonists
-  Lumberjack
-  Miner
-  Hunter
-    Less Food
-    More Speed
-  Farmer
-    More Food
-    Less Speed
+	Lumberjack
+	Miner
+	Hunter
+		Less Food
+		More Speed
+	Farmer
+		More Food
+		Less Speed
 Earn Resources
-  Wood
-  Stone
-  Food
+	Wood
+	Stone
+	Food
 Spend Resources
-  Wood
-    More Housing
-    Bigger Wood Storage
-  Stone
-    Better Tools
-    Bigger Stone Storage
-  Food
-    More Colonists
-      Limited By Housing Capacity
+	Wood
+		More Housing
+		Bigger Wood Storage
+	Stone
+		Better Tools
+		Bigger Stone Storage
+	Food
+		More Colonists
+			Limited By Housing Capacity
 ```
