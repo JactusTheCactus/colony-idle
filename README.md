@@ -11,10 +11,20 @@
 - Lua
 ## Concept
 ```yml
-run tasks:
-- Chop Trees
-- Mine Stone
-earn resources:
+Employ Colonists:
+- Lumberjack
+- Miner
+- Hunter
+- Farmer
+Earn Resources:
 - Wood
 - Stone
+- Food
+Spend Resources:
+  Wood:
+  - More Housing
+  Stone:
+  - Better Tools
+  Food:
+  - More Colonists (Limited By Housing Cap.)
 ```

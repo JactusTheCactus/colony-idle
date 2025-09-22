@@ -14,13 +14,27 @@
 		"Lua"
 	],
 	"concept": {
-		"run tasks": [
-			"Chop Trees",
-			"Mine Stone"
+		"Employ Colonists": [
+			"Lumberjack",
+			"Miner",
+			"Hunter",
+			"Farmer"
 		],
-		"earn resources": [
+		"Earn Resources": [
 			"Wood",
-			"Stone"
-		]
+			"Stone",
+			"Food"
+		],
+		"Spend Resources": {
+			"Wood": [
+				"More Housing"
+			],
+			"Stone": [
+				"Better Tools"
+			],
+			"Food": [
+				"More Colonists (Limited By Housing Cap.)"
+			]
+		}
 	}
 }
