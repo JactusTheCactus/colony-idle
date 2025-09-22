@@ -1,7 +1,7 @@
 # Colony Idle
 `#Idle`, `#Incremental`, `#Simulator`
 ## Theme
-- Colony
+- `Colony`
 ## Software
 ### Engine
 `PICO-8`
