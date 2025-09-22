@@ -25,17 +25,7 @@ with open(f"README.md", "w") as f:
 			lambda x: f"- {x}",data["software"]
 		))),
 		"## Concept",
-		stringify(data["concept"]),
-		"***",
-		stringify({
-			k: v for k, v in data.items() if k not in [
-				"title",
-				"theme",
-				"genres",
-				"software",
-				"concept",
-			]
-		})
+		stringify(data["concept"])
 	])
 	print(data)
 	f.write(data)
