@@ -7,7 +7,7 @@ del data["config"]
 if not getattr(data,"title",None):
 	data["title"] = " ".join([
 		" & ".join(data["theme"]),
-		"/".join(data["genres"])
+		" / ".join(data["genres"])
 	])
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
