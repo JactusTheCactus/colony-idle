@@ -21,8 +21,10 @@ with open(f"README.md", "w") as f:
 			data["theme"]
 		))),
 		"## Software",
+		"|||",
+		"|-:|:-|",
 		"\n".join([
-			f"- {k}: `{v}`"
+			f"|__{k}__|`{v}`|"
 			for k,v
 			in data["software"].items()
 		]),
