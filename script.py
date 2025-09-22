@@ -26,13 +26,14 @@ with open(f"README.md", "w") as f:
 		))),
 		"## Concept",
 		stringify(data["concept"]),
+		"***",
 		stringify({
 			k: v for k, v in data.items() if k not in [
 				"title",
 				"theme",
 				"genres",
 				"software",
-				"concept"
+				"concept",
 			]
 		})
 	])
