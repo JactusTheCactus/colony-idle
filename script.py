@@ -1,6 +1,8 @@
 import json,yaml,re
 def stringify(obj):
 	return yaml.dump(obj,sort_keys=False).strip()
+def listToBullets(arr):
+	return "\n".join(list(map(lambda x: f"- {x}",arr)))
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
 del data["config"]
@@ -15,17 +17,11 @@ with open(f"README.md", "w") as f:
 	data = "\n".join([
 		"# " + data["title"],
 		"## Theme",
-		"\n".join(list(map(
-			lambda x: f"- {x}",data["theme"]
-		))),
+		listToBullets(data["theme"]),
 		"## Genres",
-		"\n".join(list(map(
-			lambda x: f"- {x}",data["genres"]
-		))),
+		listToBullets(data["genres"]),
 		"## Software",
-		"\n".join(list(map(
-			lambda x: f"- {x}",data["software"]
-		))),
+		listToBullets(data["software"]),
 		"## Concept",
 		"```yml",
 		re.sub(
