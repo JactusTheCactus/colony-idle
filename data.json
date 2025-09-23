@@ -1,12 +1,11 @@
 {
 	"title": "Colony Idle",
-	"theme": [
-		"Colony"
-	],
 	"genres": [
+		"Colony",
 		"Idle",
 		"Incremental",
-		"Simulator"
+		"Simulator",
+		"God"
 	],
 	"software": {
 		"Engine": "PICO-8",
