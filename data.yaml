@@ -25,6 +25,11 @@ software:
   IDE: VSCode
   Language: Lua
 concept:
+  Player:
+    Deity:
+      Different Domains:
+        One Domain Per Run:
+        Domain-Specific Buffs & Debuffs:
   Employ Colonists:
     Lumberjack:
     Miner:
