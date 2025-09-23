@@ -15,7 +15,7 @@ Software
 --------
 |OS|IDE|Languages|
 |:-:|:-:|:-:|
-|Linux (WSL Ubuntu)|VSCode|`HTML`, `Sass`, `JS`|
+|Linux (WSL Ubuntu)|VSCode|`HTML`, `Sass (`*.scss`)`, `JS`|
 
 Gameplay
 --------

@@ -14,7 +14,7 @@
 		"IDE": "VSCode",
 		"Languages": [
 			"HTML",
-			"Sass",
+			"Sass (`*.scss`)",
 			"JS"
 		]
 	},
