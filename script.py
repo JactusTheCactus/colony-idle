@@ -37,7 +37,6 @@ with open(f"README.md", "w") as f:
 				in data["software"].items()
 			])+"|"
 		]),
-		"## Concept",
 		re.sub(
 			r":(?: null)?$",
 			"",
