@@ -3,7 +3,7 @@
 PY := python3
 STYLE := style
 DEV := false
-#include dev.mk
+-include dev.mk
 
 all : build run
 build :
