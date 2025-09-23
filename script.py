@@ -15,7 +15,6 @@ with open(f"README.md", "w") as f:
 			lambda x: f"`#{x}`",
 			sorted(data["genres"]+data["theme"])
 		))),
-		"## Software",
 		"\n".join([
 			"|"+"|".join([
 				k
