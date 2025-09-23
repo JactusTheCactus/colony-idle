@@ -17,6 +17,7 @@ genres:
 - Idle
 - Incremental
 - Simulator
+- God
 software:
   Engine: PICO-8
   OS: Linux
