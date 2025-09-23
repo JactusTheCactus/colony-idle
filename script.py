@@ -47,7 +47,7 @@ with open(f"README.md", "w") as f:
 				re.sub(
 					r" {2}",
 					"\t",
-					stringify(data["concept"])
+					stringify(sortObj(data["concept"]))
 				),
 				flags=re.M
 			),
