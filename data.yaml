@@ -1,67 +1,111 @@
-config:
-  types:
-    - &str !!str ""
-    - &int !!int 0
-    - &bool !!bool false
-    - &arr !!seq []
-    - &obj !!map {}
-  game: &default
-    title: *str
-    genres: *arr
-    software: *arr
-    concept: *obj
+game: &default
+  ? title
+  ? genres
+  ? software
+  ? concept
 <<: *default
 title: Colony Idle
 genres:
-- Colony
-- Idle
-- Incremental
-- Simulator
-- God
+- colony
+- idle
+- incremental
+- simulator
+- deity
+- management
+- fantasy
 software:
-  Engine: PICO-8
-  OS: Linux
+  OS: Linux (WSL Ubuntu)
   IDE: VSCode
-  Language: Lua
+  Engine: Phaser.JS
+  Language: JavaScript
 concept:
-  Player Is A Deity:
-    Different Domains:
-      One Domain Per Colony:
-      Domain-Specific Buffs & Debuffs:
-    Apocalypse Prestige:
-      End The World:
-        Start Again With More Power:
-          Unlocks:
-            Better Domains:
-            Heroes:
-              One-Of-A-Kind Colonists With Special Skills / Bonuses:
-          Achievements:
-            Leave Behind "Relics" Of Past Colonies:
-              Give Permanent Bonuses:
-  Employ Colonists:
-    Lumberjack:
-    Miner:
-    Hunter:
-      Less Yield:
-      More Speed:
-    Farmer:
-      More Yield:
-      Less Speed:
-  Earn Resources:
-    Wood:
-    Stone:
-    Food:
-      Deficit:
-        Production Penalty:
-      Surplus:
-        Production Bonus:
-  Spend Resources:
-    Wood:
-      More Housing:
-      Bigger Wood Storage:
-    Stone:
-      Better Tools:
-      Bigger Stone Storage:
-    Food:
-      Birth Colonists:
-        Limited By Housing Capacity:
+  player:
+    deity:
+      different domains:
+        ? one domain per colony
+        ? domain-specific buffs & debuffs
+      apocalypse prestige:
+        each domain has a specific apocalypse:
+          each apocalypse is functionally identical:
+            ? choosing one apocalypse over another changes nothing about the next run
+          visually distinct:
+            ? just visual flavour
+        end the world:
+          start again with more power:
+            unlocks:
+              better domain tiers:
+                tier 1:
+                  1.1:
+                    ? earth
+                  1.2:
+                    ? air
+                  1.3:
+                    ? water
+                  1.4:
+                    ? fire
+                tier 2:
+                  2.1:
+                    ? energy
+                tier 3:
+                  3.1:
+                    ? dark
+                  3.2:
+                    ? light
+              heroes:
+                ? one-of-a-kind colonists with special skills / bonuses
+            achievements:
+              ? leave behind "relics" of past colonies
+              ? give permanent bonuses
+    avatar:
+      same colonist throughout the lifetime of a single colony:
+        ? like other colonists, does not survive the apocalypse
+        ? personal health directly linked to the health of the colony
+      management within a colony:
+        ? assigning resources
+        ? employing colonists
+  employ colonists:
+    wood:
+      lumberjack:
+        ? less yield
+        ? more speed
+      forester:
+        ? more yield
+        ? less speed
+    stone:
+      miner:
+        ? more yield
+        ? less speed
+      quarrier:
+        ? less yield
+        ? more speed
+    food:
+      hunter:
+        ? less yield
+        ? more speed
+      farmer:
+        ? more yield
+        ? less speed
+    faith:
+      priest:
+        ? late-stage colony
+  earn resources:
+    wood:
+    stone:
+    food:
+      deficit:
+        ? production penalty
+      surplus:
+        ? production bonus
+    faith:
+      prestige resource:
+        ? spent on permanent upgrades
+  spend resources:
+    wood:
+      ? more housing
+      ? bigger wood storage
+    stone:
+      ? better tools
+      ? bigger stone storage
+    food:
+      birth colonists:
+        ? limited by housing capacity

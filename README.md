@@ -1,46 +1,111 @@
-# Colony Idle
-`#Colony`, `#God`, `#Idle`, `#Incremental`, `#Simulator`
-|Engine|OS|IDE|Language|
+Colony Idle
+===========
+
+Genres
+------
+`#Colony`,
+`#Deity`,
+`#Fantasy`,
+`#Idle`,
+`#Incremental`,
+`#Management`,
+`#Simulator`
+
+Software
+--------
+|OS|IDE|Engine|Language|
 |:-:|:-:|:-:|:-:|
-|PICO-8|Linux|VSCode|Lua|
-- Earn Resources
+|Linux (WSL Ubuntu)|VSCode|Phaser.JS|JavaScript|
+
+Gameplay
+--------
+- Earn resources
+	- Faith
+		- Prestige resource
+			- Spent on permanent upgrades
 	- Food
 		- Deficit
-			- Production Penalty
+			- Production penalty
 		- Surplus
-			- Production Bonus
+			- Production bonus
 	- Stone
 	- Wood
-- Employ Colonists
-	- Farmer
-		- Less Speed
-		- More Yield
-	- Hunter
-		- Less Yield
-		- More Speed
-	- Lumberjack
-	- Miner
-- Player Is A Deity
-	- Apocalypse Prestige
-		- End The World
-			- Start Again With More Power
-				- Achievements
-					- Leave Behind "Relics" Of Past Colonies
-						- Give Permanent Bonuses
-				- Unlocks
-					- Better Domains
-					- Heroes
-						- One-Of-A-Kind Colonists With Special Skills / Bonuses
-	- Different Domains
-		- Domain-Specific Buffs & Debuffs
-		- One Domain Per Colony
-- Spend Resources
+- Employ colonists
+	- Faith
+		- Priest
+			- Late-stage colony
 	- Food
-		- Birth Colonists
-			- Limited By Housing Capacity
+		- Farmer
+			- Less speed
+			- More yield
+		- Hunter
+			- Less yield
+			- More speed
 	- Stone
-		- Better Tools
-		- Bigger Stone Storage
+		- Miner
+			- Less speed
+			- More yield
+		- Quarrier
+			- Less yield
+			- More speed
 	- Wood
-		- Bigger Wood Storage
-		- More Housing
+		- Forester
+			- Less speed
+			- More yield
+		- Lumberjack
+			- Less yield
+			- More speed
+- Player
+	- Avatar
+		- Management within a colony
+			- Assigning resources
+			- Employing colonists
+		- Same colonist throughout the lifetime of a single colony
+			- Like other colonists, does not survive the apocalypse
+			- Personal health directly linked to the health of the colony
+	- Deity
+		- Apocalypse prestige
+			- Each domain has a specific apocalypse
+				- Each apocalypse is functionally identical
+					- Choosing one apocalypse over another changes nothing about the next run
+				- Visually distinct
+					- Just visual flavour
+			- End the world
+				- Start again with more power
+					- Achievements
+						- Give permanent bonuses
+						- Leave behind "relics" of past colonies
+					- Unlocks
+						- Better domain tiers
+							- Tier 1
+								- 1.1
+									- Earth
+								- 1.2
+									- Air
+								- 1.3
+									- Water
+								- 1.4
+									- Fire
+							- Tier 2
+								- 2.1
+									- Energy
+							- Tier 3
+								- 3.1
+									- Dark
+								- 3.2
+									- Light
+						- Heroes
+							- One-of-a-kind colonists with special skills / bonuses
+		- Different domains
+			- Domain-specific buffs & debuffs
+			- One domain per colony
+- Spend resources
+	- Food
+		- Birth colonists
+			- Limited by housing capacity
+	- Stone
+		- Better tools
+		- Bigger stone storage
+	- Wood
+		- Bigger wood storage
+		- More housing

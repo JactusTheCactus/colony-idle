@@ -1,80 +1,165 @@
 {
 	"title": "Colony Idle",
 	"genres": [
-		"Colony",
-		"Idle",
-		"Incremental",
-		"Simulator",
-		"God"
+		"colony",
+		"idle",
+		"incremental",
+		"simulator",
+		"deity",
+		"management",
+		"fantasy"
 	],
 	"software": {
-		"Engine": "PICO-8",
-		"OS": "Linux",
+		"OS": "Linux (WSL Ubuntu)",
 		"IDE": "VSCode",
-		"Language": "Lua"
+		"Engine": "Phaser.JS",
+		"Language": "JavaScript"
 	},
 	"concept": {
-		"Player Is A Deity": {
-			"Different Domains": {
-				"One Domain Per Colony": null,
-				"Domain-Specific Buffs & Debuffs": null
-			},
-			"Apocalypse Prestige": {
-				"End The World": {
-					"Start Again With More Power": {
-						"Unlocks": {
-							"Better Domains": null,
-							"Heroes": {
-								"One-Of-A-Kind Colonists With Special Skills / Bonuses": null
-							}
+		"player": {
+			"deity": {
+				"different domains": {
+					"one domain per colony": null,
+					"domain-specific buffs & debuffs": null
+				},
+				"apocalypse prestige": {
+					"each domain has a specific apocalypse": {
+						"each apocalypse is functionally identical": {
+							"choosing one apocalypse over another changes nothing about the next run": null
 						},
-						"Achievements": {
-							"Leave Behind \"Relics\" Of Past Colonies": {
-								"Give Permanent Bonuses": null
+						"visually distinct": {
+							"just visual flavour": null
+						}
+					},
+					"end the world": {
+						"start again with more power": {
+							"unlocks": {
+								"better domain tiers": {
+									"tier 1": {
+										"1.1": {
+											"earth": null
+										},
+										"1.2": {
+											"air": null
+										},
+										"1.3": {
+											"water": null
+										},
+										"1.4": {
+											"fire": null
+										}
+									},
+									"tier 2": {
+										"2.1": {
+											"energy": null
+										}
+									},
+									"tier 3": {
+										"3.1": {
+											"dark": null
+										},
+										"3.2": {
+											"light": null
+										}
+									}
+								},
+								"heroes": {
+									"one-of-a-kind colonists with special skills / bonuses": null
+								}
+							},
+							"achievements": {
+								"leave behind \"relics\" of past colonies": null,
+								"give permanent bonuses": null
 							}
 						}
 					}
 				}
-			}
-		},
-		"Employ Colonists": {
-			"Lumberjack": null,
-			"Miner": null,
-			"Hunter": {
-				"Less Yield": null,
-				"More Speed": null
 			},
-			"Farmer": {
-				"More Yield": null,
-				"Less Speed": null
-			}
-		},
-		"Earn Resources": {
-			"Wood": null,
-			"Stone": null,
-			"Food": {
-				"Deficit": {
-					"Production Penalty": null
+			"avatar": {
+				"same colonist throughout the lifetime of a single colony": {
+					"like other colonists, does not survive the apocalypse": null,
+					"personal health directly linked to the health of the colony": null
 				},
-				"Surplus": {
-					"Production Bonus": null
+				"management within a colony": {
+					"assigning resources": null,
+					"employing colonists": null
 				}
 			}
 		},
-		"Spend Resources": {
-			"Wood": {
-				"More Housing": null,
-				"Bigger Wood Storage": null
+		"employ colonists": {
+			"wood": {
+				"lumberjack": {
+					"less yield": null,
+					"more speed": null
+				},
+				"forester": {
+					"more yield": null,
+					"less speed": null
+				}
 			},
-			"Stone": {
-				"Better Tools": null,
-				"Bigger Stone Storage": null
+			"stone": {
+				"miner": {
+					"more yield": null,
+					"less speed": null
+				},
+				"quarrier": {
+					"less yield": null,
+					"more speed": null
+				}
 			},
-			"Food": {
-				"Birth Colonists": {
-					"Limited By Housing Capacity": null
+			"food": {
+				"hunter": {
+					"less yield": null,
+					"more speed": null
+				},
+				"farmer": {
+					"more yield": null,
+					"less speed": null
+				}
+			},
+			"faith": {
+				"priest": {
+					"late-stage colony": null
+				}
+			}
+		},
+		"earn resources": {
+			"wood": null,
+			"stone": null,
+			"food": {
+				"deficit": {
+					"production penalty": null
+				},
+				"surplus": {
+					"production bonus": null
+				}
+			},
+			"faith": {
+				"prestige resource": {
+					"spent on permanent upgrades": null
+				}
+			}
+		},
+		"spend resources": {
+			"wood": {
+				"more housing": null,
+				"bigger wood storage": null
+			},
+			"stone": {
+				"better tools": null,
+				"bigger stone storage": null
+			},
+			"food": {
+				"birth colonists": {
+					"limited by housing capacity": null
 				}
 			}
 		}
+	},
+	"game": {
+		"title": null,
+		"genres": null,
+		"software": null,
+		"concept": null
 	}
 }
