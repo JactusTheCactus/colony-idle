@@ -12,8 +12,8 @@
 	"software": {
 		"OS": "Linux (WSL Ubuntu)",
 		"IDE": "VSCode",
-		"Engine": "Phaser.JS",
-		"Language": "JavaScript"
+		"Engine": null,
+		"Language": null
 	},
 	"concept": {
 		"player": {

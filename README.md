@@ -15,7 +15,7 @@ Software
 --------
 |OS|IDE|Engine|Language|
 |:-:|:-:|:-:|:-:|
-|Linux (WSL Ubuntu)|VSCode|Phaser.JS|JavaScript|
+|Linux (WSL Ubuntu)|VSCode|`N/A`|`N/A`|
 
 Gameplay
 --------

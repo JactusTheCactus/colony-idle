@@ -16,8 +16,8 @@ genres:
 software:
   OS: Linux (WSL Ubuntu)
   IDE: VSCode
-  Engine: Phaser.JS
-  Language: JavaScript
+  ? Engine
+  ? Language
 concept:
   player:
     deity:
