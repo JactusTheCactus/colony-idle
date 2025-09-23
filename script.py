@@ -47,7 +47,16 @@ with open(f"README.md", "w") as f:
 				range(len(data["software"]))
 			]) + "|",
 			"|" + "|".join([
-				(", ".join(data["software"][k]) if isinstance(data["software"][k],list) else data["software"][k]) if data["software"][k] else "`N/A`"
+				(
+					", ".join(list(map(
+						lambda x: f"`{x}`",
+						data["software"][k]
+					)))
+					if isinstance(data["software"][k],list) else
+					data["software"][k]
+				)
+				if data["software"][k] else
+				"`N/A`"
 				for k in
 				data["software"].keys()
 			]) + "|"
