@@ -24,7 +24,7 @@ jobs:
             local s=$2
             printf "%0.s$s" $(seq 1 $n)
           }
-          LINE="$(repeat 25 "=")"
+          LINE="$(repeat 50 "=")"
           sudo apt-get update > /dev/null
           echo $LINE
           sudo apt-get install -y build-essential > /dev/null
