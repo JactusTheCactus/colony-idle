@@ -19,12 +19,12 @@ jobs:
           cache: npm
       - name: Make & commit
         run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential
-          npm ci
-          make
+          sudo apt-get update > /dev/null
+          sudo apt-get install -y build-essential > /dev/null
+          npm ci > /dev/null
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "GitHub Actions Bot"
+          make
           git add .
           git commit -m "Commit Make changes" || :
           git push origin main
