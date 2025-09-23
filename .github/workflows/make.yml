@@ -31,7 +31,7 @@ jobs:
             echo $LINE
           }
           sudo apt-get update > /dev/null
-          $(wrap "sudo apt-get install -y build-essential > /dev/null 2>&1")
+          wrap sudo apt-get install -y build-essential > /dev/null 2>&1
           npm ci > /dev/null
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "GitHub Actions Bot"
