@@ -15,11 +15,21 @@
 		"Language": "Lua"
 	},
 	"concept": {
-		"Player": {
-			"Deity": {
-				"Different Domains": {
-					"One Domain Per Run": null,
-					"Domain-Specific Buffs & Debuffs": null
+		"Player Is A Deity": {
+			"Different Domains": {
+				"One Domain Per Colony": null,
+				"Domain-Specific Buffs & Debuffs": null
+			},
+			"Apocalypse Prestige": {
+				"End The World": {
+					"Start Again With More Power": {
+						"Unlocks": {
+							"Better Domains": null,
+							"Heroes": {
+								"One-Of-A-Kind Colonists With Special Skills / Bonuses": null
+							}
+						}
+					}
 				}
 			}
 		},

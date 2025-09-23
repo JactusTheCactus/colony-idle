@@ -20,11 +20,17 @@
 		- More Speed
 	- Lumberjack
 	- Miner
-- Player
-	- Deity
-		- Different Domains
-			- Domain-Specific Buffs & Debuffs
-			- One Domain Per Run
+- Player Is A Deity
+	- Apocalypse Prestige
+		- End The World
+			- Start Again With More Power
+				- Unlocks
+					- Better Domains
+					- Heroes
+						- One-Of-A-Kind Colonists With Special Skills / Bonuses
+	- Different Domains
+		- Domain-Specific Buffs & Debuffs
+		- One Domain Per Colony
 - Spend Resources
 	- Food
 		- Birth Colonists
