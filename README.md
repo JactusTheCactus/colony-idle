@@ -1,6 +1,5 @@
 # Colony Idle
 `#Colony`, `#Idle`, `#Incremental`, `#Simulator`
-## Software
 |Engine|OS|IDE|Language|
 |:-:|:-:|:-:|:-:|
 |PICO-8|Linux|VSCode|Lua|
