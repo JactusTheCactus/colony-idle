@@ -1,0 +1,23 @@
+{
+  "name": "colony-idle",
+  "version": "1.0.0",
+  "description": "Colony Idle ===========",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JactusTheCactus/colony-idle.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JactusTheCactus/colony-idle/issues"
+  },
+  "homepage": "https://github.com/JactusTheCactus/colony-idle#readme",
+  "dependencies": {
+    "sass": "^1.93.1"
+  }
+}

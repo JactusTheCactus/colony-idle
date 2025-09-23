@@ -1,25 +1,29 @@
-import json,yaml,re
+import json
+import yaml
+import re
 def stringify(obj):
 	return yaml.dump(obj,sort_keys=False).strip()
-def sortObj(d):
-	if isinstance(d, dict):
-		return {str(k).capitalize(): sortObj(v) for k, v in sorted(d.items())}
-	elif isinstance(d, list):
-		return [sortObj(i) for i in d]
+def sortObj(obj):
+	if isinstance(obj,dict):
+		return {str(k).capitalize(): sortObj(v) for k, v in sorted(obj.items())}
+	elif isinstance(obj,list):
+		return [sortObj(i) for i in sorted(obj)]
+	elif isinstance(obj,str):
+		return obj.capitalize()
 	else:
-		return d
+		return obj
 def h(level:int,label:str):
-	levels = {
-		1: "=",
-		2: "-"
-	}
-	return "\n".join([
-		"",
-		label,
-		levels[level] * len(label)
-	])
+	levels = ["=","-"]
+	return "".join(list(map(
+		lambda x: "\n"+x,
+		[
+			label,
+			levels[level-1] * len(label)
+		]
+	)))
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
+del data["game"]
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
@@ -53,18 +57,26 @@ with open(f"README.md", "w") as f:
 			r":(?: null)?$",
 			r"",
 			re.sub(
-				r"(\t|^)([^\t])",
-				r"\1- \2",
+				r"(- )+",
+				r"\1",
 				re.sub(
-					r" {2}",
-					"\t",
+					r"(\t|^)([^\t])",
+					r"\1- \2",
 					re.sub(
-						r"'?(.*?)'?",
-						r"\1",
-						stringify(sortObj(data["concept"]))
-					)
-				),
-				flags=re.M
+						r" {2}",
+						"\t",
+						re.sub(
+							r"'?(.*?)'?",
+							r"\1",
+							re.sub(
+								r"(- )",
+								r"\t\1",
+								stringify(sortObj(data["concept"]))
+							)
+						)
+					),
+					flags=re.M
+				)
 			),
 			flags=re.M
 		)

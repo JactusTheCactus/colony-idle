@@ -1,10 +1,9 @@
 .PHONY : all build
 
 PY := python3
-SCRIPT := script.py
-DATA := data.yaml
-README := README.md
+STYLE := style
 
 all : build
 build :
-	@$(PY) $(SCRIPT)
+	@$(PY) script.py
+	@sass $(STYLE).scss $(STYLE).css

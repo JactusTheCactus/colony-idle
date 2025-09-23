@@ -78,22 +78,15 @@ Gameplay
 					- Unlocks
 						- Better domain tiers
 							- Tier 1
-								- 1.1
-									- Earth
-								- 1.2
-									- Air
-								- 1.3
-									- Water
-								- 1.4
-									- Fire
+								- 1.1: Earth
+								- 1.2: Air
+								- 1.3: Water
+								- 1.4: Fire
 							- Tier 2
-								- 2.1
-									- Energy
+								- 2.1: Energy
 							- Tier 3
-								- 3.1
-									- Dark
-								- 3.2
-									- Light
+								- 3.1: Dark
+								- 3.2: Light
 						- Heroes
 							- One-of-a-kind colonists with special skills / bonuses
 		- Different domains

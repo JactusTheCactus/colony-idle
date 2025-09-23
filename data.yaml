@@ -22,90 +22,83 @@ concept:
   player:
     deity:
       different domains:
-        ? one domain per colony
-        ? domain-specific buffs & debuffs
+      - one domain per colony
+      - domain-specific buffs & debuffs
       apocalypse prestige:
         each domain has a specific apocalypse:
           each apocalypse is functionally identical:
-            ? choosing one apocalypse over another changes nothing about the next run
+          - choosing one apocalypse over another changes nothing about the next run
           visually distinct:
-            ? just visual flavour
+          - just visual flavour
         end the world:
           start again with more power:
             unlocks:
               better domain tiers:
                 tier 1:
-                  1.1:
-                    ? earth
-                  1.2:
-                    ? air
-                  1.3:
-                    ? water
-                  1.4:
-                    ? fire
+                  1.1: earth
+                  1.2: air
+                  1.3: water
+                  1.4: fire
                 tier 2:
-                  2.1:
-                    ? energy
+                  2.1: energy
                 tier 3:
-                  3.1:
-                    ? dark
-                  3.2:
-                    ? light
+                  3.1: dark
+                  3.2: light
               heroes:
-                ? one-of-a-kind colonists with special skills / bonuses
+              - one-of-a-kind colonists with special skills / bonuses
             achievements:
-              ? leave behind "relics" of past colonies
-              ? give permanent bonuses
+            - leave behind "relics" of past colonies
+            - give permanent bonuses
     avatar:
       same colonist throughout the lifetime of a single colony:
-        ? like other colonists, does not survive the apocalypse
-        ? personal health directly linked to the health of the colony
+      - like other colonists, does not survive the apocalypse
+      - personal health directly linked to the health of the colony
       management within a colony:
-        ? assigning resources
-        ? employing colonists
+      - assigning resources
+      - employing colonists
   employ colonists:
     wood:
       lumberjack:
-        ? less yield
-        ? more speed
+      - less yield
+      - more speed
       forester:
-        ? more yield
-        ? less speed
+      - more yield
+      - less speed
     stone:
       miner:
-        ? more yield
-        ? less speed
+      - more yield
+      - less speed
       quarrier:
-        ? less yield
-        ? more speed
+      - less yield
+      - more speed
     food:
       hunter:
-        ? less yield
-        ? more speed
+      - less yield
+      - more speed
       farmer:
-        ? more yield
-        ? less speed
+      - more yield
+      - less speed
     faith:
       priest:
-        ? late-stage colony
+      - late-stage colony
   earn resources:
-    wood:
-    stone:
+    ? wood
+    ? stone
     food:
       deficit:
-        ? production penalty
+      - production penalty
       surplus:
-        ? production bonus
+      - production bonus
     faith:
       prestige resource:
-        ? spent on permanent upgrades
+      - spent on permanent upgrades
   spend resources:
     wood:
-      ? more housing
-      ? bigger wood storage
+    - more housing
+    - bigger wood storage
     stone:
-      ? better tools
-      ? bigger stone storage
+    - better tools
+    - bigger stone storage
     food:
       birth colonists:
-        ? limited by housing capacity
+      - limited by housing capacity
