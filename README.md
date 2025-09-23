@@ -13,9 +13,9 @@ Genres
 
 Software
 --------
-|OS|IDE|Engine|Language|
-|:-:|:-:|:-:|:-:|
-|Linux (WSL Ubuntu)|VSCode|`N/A`|`N/A`|
+|OS|IDE|Languages|
+|:-:|:-:|:-:|
+|Linux (WSL Ubuntu)|VSCode|HTML, SCSS, JS|
 
 Gameplay
 --------

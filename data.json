@@ -12,8 +12,11 @@
 	"software": {
 		"OS": "Linux (WSL Ubuntu)",
 		"IDE": "VSCode",
-		"Engine": null,
-		"Language": null
+		"Languages": [
+			"HTML",
+			"SCSS",
+			"JS"
+		]
 	},
 	"concept": {
 		"player": {
