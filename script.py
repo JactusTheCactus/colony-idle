@@ -1,8 +1,8 @@
 import json,yaml,re
 def stringify(obj):
 	return yaml.dump(obj,sort_keys=False).strip()
-def listToBullets(arr):
-	return "\n".join(list(map(lambda x: f"- {x}",arr)))
+def objSort(obj):
+	return
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
 del data["config"]
