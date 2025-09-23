@@ -3,7 +3,6 @@
 |Engine|OS|IDE|Language|
 |:-:|:-:|:-:|:-:|
 |PICO-8|Linux|VSCode|Lua|
-## Concept
 - Earn Resources
 	- Food
 		- Deficit
