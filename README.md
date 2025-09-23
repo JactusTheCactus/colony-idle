@@ -4,30 +4,30 @@
 |:-:|:-:|:-:|:-:|
 |PICO-8|Linux|VSCode|Lua|
 ## Concept
-- Employ Colonists
-	- Lumberjack
-	- Miner
-	- Hunter
-		- Less Yield
-		- More Speed
-	- Farmer
-		- More Yield
-		- Less Speed
 - Earn Resources
-	- Wood
-	- Stone
 	- Food
 		- Deficit
 			- Production Penalty
 		- Surplus
 			- Production Bonus
-- Spend Resources
-	- Wood
-		- More Housing
-		- Bigger Wood Storage
 	- Stone
-		- Better Tools
-		- Bigger Stone Storage
+	- Wood
+- Employ Colonists
+	- Farmer
+		- Less Speed
+		- More Yield
+	- Hunter
+		- Less Yield
+		- More Speed
+	- Lumberjack
+	- Miner
+- Spend Resources
 	- Food
 		- Birth Colonists
 			- Limited By Housing Capacity
+	- Stone
+		- Better Tools
+		- Bigger Stone Storage
+	- Wood
+		- Bigger Wood Storage
+		- More Housing
