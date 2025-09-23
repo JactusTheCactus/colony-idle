@@ -1,8 +1,13 @@
 import json,yaml,re
 def stringify(obj):
 	return yaml.dump(obj,sort_keys=False).strip()
-def objSort(obj):
-	return
+def sortObj(d):
+	if isinstance(d, dict):
+		return {k: sortObj(v) for k, v in sorted(d.items())}
+	elif isinstance(d, list):
+		return [sortObj(i) for i in d]
+	else:
+		return d
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
 del data["config"]
