@@ -24,11 +24,14 @@ jobs:
             local rep=$2
             printf "%0.s$str" $(seq 1 $rep)
           }
-          LINE="$(repeat "=" 50)"
+          wrap() {
+            local LINE="$(repeat "=" 50)"
+            echo $LINE
+            $1
+            echo $LINE
+          }
           sudo apt-get update > /dev/null
-          echo $LINE
-          sudo apt-get install -y build-essential > /dev/null 2>&1
-          echo $LINE
+          $(wrap "sudo apt-get install -y build-essential > /dev/null 2>&1")
           npm ci > /dev/null
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "GitHub Actions Bot"
