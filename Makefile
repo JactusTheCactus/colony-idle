@@ -8,7 +8,7 @@ DEV := false
 all : build run
 build :
 	@$(PY) script.py
-	@sass $(STYLE).scss $(STYLE).css
+	@npx sass $(STYLE).scss $(STYLE).css
 run :
 ifeq ($(DEV),true)
 	@php -S localhost:
