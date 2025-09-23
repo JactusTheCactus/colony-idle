@@ -25,11 +25,17 @@ software:
   IDE: VSCode
   Language: Lua
 concept:
-  Player:
-    Deity:
-      Different Domains:
-        One Domain Per Run:
-        Domain-Specific Buffs & Debuffs:
+  Player Is A Deity:
+    Different Domains:
+      One Domain Per Colony:
+      Domain-Specific Buffs & Debuffs:
+    Apocalypse Prestige:
+      End The World:
+        Start Again With More Power:
+          Unlocks:
+            Better Domains:
+            Heroes:
+              One-Of-A-Kind Colonists With Special Skills / Bonuses:
   Employ Colonists:
     Lumberjack:
     Miner:
