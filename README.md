@@ -20,6 +20,11 @@
 		- More Speed
 	- Lumberjack
 	- Miner
+- Player
+	- Deity
+		- Different Domains
+			- Domain-Specific Buffs & Debuffs
+			- One Domain Per Run
 - Spend Resources
 	- Food
 		- Birth Colonists

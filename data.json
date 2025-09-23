@@ -15,6 +15,14 @@
 		"Language": "Lua"
 	},
 	"concept": {
+		"Player": {
+			"Deity": {
+				"Different Domains": {
+					"One Domain Per Run": null,
+					"Domain-Specific Buffs & Debuffs": null
+				}
+			}
+		},
 		"Employ Colonists": {
 			"Lumberjack": null,
 			"Miner": null,
