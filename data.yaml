@@ -16,8 +16,10 @@ genres:
 software:
   OS: Linux (WSL Ubuntu)
   IDE: VSCode
-  ? Engine
-  ? Language
+  Languages:
+  - HTML
+  - SCSS
+  - JS
 concept:
   player:
     deity:
