@@ -23,7 +23,6 @@ def h(level:int,label:str):
 	)))
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
-del data["game"]
 with open(f"data.json", "w") as f:
 	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
