@@ -24,6 +24,9 @@
 	- Apocalypse Prestige
 		- End The World
 			- Start Again With More Power
+				- Achievements
+					- Leave Behind "Relics" Of Past Colonies
+						- Give Permanent Bonuses
 				- Unlocks
 					- Better Domains
 					- Heroes
