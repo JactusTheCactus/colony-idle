@@ -7,15 +7,13 @@ config:
     - &obj !!map {}
   game: &default
     title: *str
-    theme: *arr
     genres: *arr
     software: *arr
     concept: *obj
 <<: *default
 title: Colony Idle
-theme:
-- Colony
 genres:
+- Colony
 - Idle
 - Incremental
 - Simulator
