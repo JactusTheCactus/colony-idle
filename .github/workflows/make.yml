@@ -24,7 +24,9 @@ jobs:
             local rep=$2
             printf "%0.s$str" $(seq 1 $rep)
           }
-          line() {echo "$(repeat "=" 50)"}
+          line() {
+            echo "$(repeat "=" 50)"
+          }
           sudo apt-get update > /dev/null
           sudo apt-get install -y build-essential > /dev/null 2>&1
           npm ci > /dev/null
