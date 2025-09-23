@@ -1,9 +1,3 @@
-game: &default
-  ? title
-  ? genres
-  ? software
-  ? concept
-<<: *default
 title: Colony Idle
 genres:
 - colony
