@@ -48,8 +48,8 @@ with open(f"README.md", "w") as f:
 			"|" + "|".join([
 				(
 					", ".join(list(map(
-						lambda x: f"`{x}`",
-						data["software"][k]
+						lambda k,v: f"{k} `[*.{v}]`",
+						data["software"][k].entries()
 					)))
 					if isinstance(data["software"][k],list) else
 					data["software"][k]
