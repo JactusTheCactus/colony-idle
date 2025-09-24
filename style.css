@@ -1,6 +1,19 @@
 body {
   font-size: 20pt;
   font-family: Verdana;
+  margin: 0;
+  padding: 0;
+}
+body table {
+  border: 0.1em solid;
+  width: 100%;
+}
+body table * {
+  border: 0.1em solid;
+}
+body table #main {
+  border: 0.1em solid;
+  height: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
