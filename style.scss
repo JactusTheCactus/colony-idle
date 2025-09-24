@@ -1,24 +1,18 @@
-@mixin tableStyle {
-	border: 0.1em solid;
-}
-
 body {
-	font-size: 20pt;
-	font-family: Verdana;
-	margin: 0;
-	padding: 0;
+	font: 20pt Verdana;
 
-	table {
-		@include tableStyle;
-		width: 100%;
+	#resources {
+		display: flex;
+		justify-content: space-evenly;
 
 		* {
-			@include tableStyle;
+			text-align: center;
 		}
+	}
 
-		#main {
-			@include tableStyle;
-			height: 100%;
-		}
+	#main {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
 	}
 }
