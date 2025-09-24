@@ -35,7 +35,7 @@ with open(f"README.md", "w") as f:
 			"|" + "|".join([":-:" for i in range(len(data["software"]))]) + "|",
 			"|" + "|".join([
 				(
-					", ".join([f"{k} `[*.{v}]`" for k,v in data["software"][k].items()])
+					"<hr>".join([f"{k} `[*.{v}]`" for k,v in data["software"][k].items()])
 					if isinstance(data["software"][k],dict) else
 					data["software"][k]
 				)

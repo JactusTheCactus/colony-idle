@@ -6,7 +6,7 @@ DEV := false
 
 all : build run
 build : README.md style.css script.js index.html
-README.md : script.py
+README.md : script.py data.yaml
 	@$(PY) script.py
 style.css : style.scss
 	@npx sass style.scss style.css
