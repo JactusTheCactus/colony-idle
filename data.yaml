@@ -13,7 +13,7 @@ software:
   Languages:
     HTML: html
     Sass: s{a,c}ss
-    JS / TS: "{j,t}s"
+    JS: "{j,t}s"
 concept:
   player:
     deity:
