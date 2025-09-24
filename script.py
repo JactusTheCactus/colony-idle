@@ -52,7 +52,7 @@ with open(f"README.md", "w") as f:
 						for k,v in
 						data["software"][k].entries()
 					])
-					if isinstance(data["software"][k],list) else
+					if isinstance(data["software"][k],dict) else
 					data["software"][k]
 				)
 				if data["software"][k] else
