@@ -56,11 +56,11 @@ class BigNumber {
 			this.exponent
 		].join("e");
 	}
-};
+}
 const doc = document.body;
 function append(child: HTMLElement) {
 	doc.appendChild(child)
-};
+}
 function getTime(
 	s: number = 0,
 	m: number = 0,
@@ -74,15 +74,24 @@ function getTime(
 	n = (n + s) * 1000;
 	return n
 }
-let n = new BigNumber()
-const count = document.createElement("p");
-const rateEl = document.createElement("code");
-const rate = new BigNumber(1);
+let wood = new BigNumber(0);
+let stone = new BigNumber(0);
+let food = new BigNumber(0);
+let woodRate = new BigNumber(1);
+let stoneRate = new BigNumber(1);
+let foodRate = new BigNumber(1);
+let woodCount = document.createElement("div");
+let stoneCount = document.createElement("div");
+let foodCount = document.createElement("div");
 function run() {
-	n = n.add(rate);
-	rateEl.innerHTML = `${rate.toString()}/s`;
-	doc.appendChild(rateEl);
-	count.innerHTML = n.toString();
-	doc.appendChild(count);
+	wood = wood.add(woodRate);
+	stone = stone.add(stoneRate);
+	food = food.add(foodRate);
+	woodCount.innerHTML = `Wood: ${wood.toString()}`;
+	stoneCount.innerHTML = `Stone: ${stone.toString()}`;
+	foodCount.innerHTML = `Food: ${food.toString()}`;
+	append(woodCount);
+	append(stoneCount);
+	append(foodCount);
 }
 setInterval(run, getTime(1));
