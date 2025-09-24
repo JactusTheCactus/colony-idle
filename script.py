@@ -47,10 +47,11 @@ with open(f"README.md", "w") as f:
 			]) + "|",
 			"|" + "|".join([
 				(
-					", ".join(list(map(
-						lambda k,v: f"{k} `[*.{v}]`",
+					", ".join([
+						f"{k} `[*.{v}]`"
+						for k,v in
 						data["software"][k].entries()
-					)))
+					])
 					if isinstance(data["software"][k],list) else
 					data["software"][k]
 				)
