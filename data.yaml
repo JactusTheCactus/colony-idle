@@ -11,9 +11,9 @@ software:
   OS: Linux (WSL Ubuntu)
   IDE: VSCode
   Languages:
-  - HTML [*.html]
-  - Sass [*.s{a,c}ss]
-  - JS [*.js]
+    HTML: html
+    Sass: s{a,c}ss
+    JS: js
 concept:
   player:
     deity:
