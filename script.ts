@@ -82,36 +82,34 @@ type Resource = {
 	rate: BigNumber;
 	element: HTMLTableCellElement;
 	name: string;
+	icon: string;
 };
 const resources: Record<string, Resource> = {
 	wood: {
 		amount: new BigNumber(0),
 		rate: new BigNumber(1),
 		element: document.createElement("td"),
-		name: "Wood"
+		name: "Wood",
+		icon: "&#x1fab5;"
 	},
 	stone: {
 		amount: new BigNumber(0),
 		rate: new BigNumber(1),
 		element: document.createElement("td"),
-		name: "Stone"
+		name: "Stone",
+		icon: "&#x1faa8;"
 	},
 	food: {
 		amount: new BigNumber(0),
 		rate: new BigNumber(1),
 		element: document.createElement("td"),
-		name: "Food"
+		name: "Food",
+		icon: "&#x1f356;"
 	},
 };
 function runResource(resource: Resource, first: boolean) {
 	resource.amount = resource.amount.add(resource.rate);
-	resource.element.innerHTML = [
-		resource.name,
-		[
-			resource.amount.toString(),
-			resource.rate.toString() + "/s"
-		].join(" | ")
-	].join(": ");
+	resource.element.innerHTML = `${resource.name}: ${resource.amount.toString()}${resource.icon} | ${resource.rate.toString()}/s`;
 	navAppend(resource.element);
 	if (first) {
 		const main = document.querySelector("#main");
