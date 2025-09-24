@@ -50,7 +50,7 @@ with open(f"README.md", "w") as f:
 					", ".join([
 						f"{k} `[*.{v}]`"
 						for k,v in
-						data["software"][k].entries()
+						data["software"][k].items()
 					])
 					if isinstance(data["software"][k],dict) else
 					data["software"][k]
