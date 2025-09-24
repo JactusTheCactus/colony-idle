@@ -1,6 +1,4 @@
-import json
-import yaml
-import re
+import yaml,re
 def stringify(obj):
 	return yaml.dump(obj,sort_keys=False).strip()
 def sortObj(obj):
@@ -15,7 +13,7 @@ def sortObj(obj):
 def h(level:int,label:str):
 	levels = ["=","-"]
 	return "".join(list(map(
-		lambda x: "\n"+x,
+		lambda x: "\n" + x,
 		[
 			label,
 			levels[level-1] * len(label)
@@ -23,42 +21,26 @@ def h(level:int,label:str):
 	)))
 with open("data.yaml", "r") as f:
 	data = yaml.safe_load(f)
-with open(f"data.json", "w") as f:
-	json.dump(data,f,indent="\t")
 with open(f"README.md", "w") as f:
 	data = "\n".join([
 		h(1, data["title"]),
 		h(2, "Genres"),
-		",\n".join(list(map(
+		", ".join(list(map(
 			lambda x: f"`#{x.capitalize()}`",
 			sorted(data["genres"])
 		))),
 		h(2, "Software"),
 		"\n".join([
-			"|" + "|".join([
-				k
-				for k in
-				data["software"].keys()
-			]) + "|",
-			"|" + "|".join([
-				":-:"
-				for i in
-				range(len(data["software"]))
-			]) + "|",
+			"|" + "|".join([k for k in data["software"].keys()]) + "|",
+			"|" + "|".join([":-:" for i in range(len(data["software"]))]) + "|",
 			"|" + "|".join([
 				(
-					", ".join([
-						f"{k} `[*.{v}]`"
-						for k,v in
-						data["software"][k].items()
-					])
+					", ".join([f"{k} `[*.{v}]`" for k,v in data["software"][k].items()])
 					if isinstance(data["software"][k],dict) else
 					data["software"][k]
 				)
 				if data["software"][k] else
-				"`N/A`"
-				for k in
-				data["software"].keys()
+				"`N/A`" for k in data["software"].keys()
 			]) + "|"
 		]),
 		h(2, "Gameplay"),

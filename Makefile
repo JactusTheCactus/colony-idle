@@ -1,14 +1,17 @@
 .PHONY : all build run
 
 PY := python3
-STYLE := style
 DEV := false
--include dev.mk
+#-include dev.mk
 
 all : build run
-build :
+build : README.md style.css script.js
+README.md : script.py
 	@$(PY) script.py
-	@npx sass $(STYLE).scss $(STYLE).css
+style.css : style.scss
+	@npx sass style.scss style.css
+script.js : script.ts
+	@tsc script.ts --target esnext
 run :
 ifeq ($(DEV),true)
 	@php -S localhost:

@@ -3,13 +3,7 @@ Colony Idle
 
 Genres
 ------
-`#Colony`,
-`#Deity`,
-`#Fantasy`,
-`#Idle`,
-`#Incremental`,
-`#Management`,
-`#Simulator`
+`#Colony`, `#Deity`, `#Fantasy`, `#Idle`, `#Incremental`, `#Management`, `#Simulator`
 
 Software
 --------
