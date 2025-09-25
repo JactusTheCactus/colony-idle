@@ -1,6 +1,11 @@
 body {
   font: 20pt Verdana;
 }
+body vr {
+  border-left: 1px solid gray;
+  height: 50px;
+  margin: 0 10px;
+}
 body #resources {
   display: flex;
   justify-content: space-evenly;

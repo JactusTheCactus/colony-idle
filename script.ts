@@ -1,6 +1,13 @@
+function any(arr: Boolean[]) {
+	return arr.some(i => i)
+}
+function all(arr: Boolean[]) {
+	return arr.every(i => i)
+}
 class BigNumber {
 	mantissa: number;
 	exponent: number;
+	value: Array<number>;
 	constructor(mantissa: number = 0, exponent: number = 0) {
 		if (mantissa === 0) {
 			this.mantissa = 0;
@@ -9,6 +16,10 @@ class BigNumber {
 			this.exponent = Math.floor(Math.log10(Math.abs(mantissa))) + exponent;
 			this.mantissa = mantissa / Math.pow(10, Math.floor(Math.log10(Math.abs(mantissa))));
 		}
+		this.value = [
+			this.mantissa,
+			this.exponent
+		];
 		this.normalize();
 	}
 	normalize() {
@@ -25,62 +36,82 @@ class BigNumber {
 			this.exponent--;
 		}
 	}
+	assign(other: BigNumber) {
+		this.mantissa = other.mantissa;
+		this.exponent = other.exponent;
+	}
 	add(other: BigNumber) {
+		const bigger: BigNumber = other.exponent > this.exponent ? other : this;
+		const smaller: BigNumber = other.exponent > this.exponent ? this : other;
+		const diff = bigger.exponent - smaller.exponent;
 		if (this.exponent === other.exponent) {
-			return new BigNumber(this.mantissa + other.mantissa, this.exponent);
+			return new BigNumber(
+				this.mantissa + other.mantissa,
+				this.exponent
+			);
+		} else if (diff > 15) {
+			return new BigNumber(
+				bigger.mantissa,
+				bigger.exponent
+			)
+		} else {
+			return new BigNumber(
+				bigger.mantissa + smaller.mantissa / Math.pow(10, diff),
+				bigger.exponent
+			)
 		}
-		let bigger: BigNumber = this;
-		let smaller: BigNumber = other;
-		if (other.exponent > this.exponent) {
-			bigger = other;
-			smaller = this;
-		}
-		let diff = bigger.exponent - smaller.exponent;
-		if (diff > 15) {
-			return new BigNumber(bigger.mantissa, bigger.exponent);
-		}
-		return new BigNumber(
-			bigger.mantissa + smaller.mantissa / Math.pow(10, diff),
-			bigger.exponent
-		);
 	}
 	subtract(other: BigNumber) {
+		const bigger: BigNumber = other.exponent > this.exponent ? other : this;
+		const smaller: BigNumber = other.exponent > this.exponent ? this : other;
+		const diff = bigger.exponent - smaller.exponent;
 		if (this.exponent === other.exponent) {
-			return new BigNumber(this.mantissa - other.mantissa, this.exponent);
+			return new BigNumber(
+				this.mantissa - other.mantissa,
+				this.exponent
+			);
+		} else if (diff > 15) {
+			return new BigNumber(
+				bigger.mantissa,
+				bigger.exponent
+			)
+		} else {
+			return new BigNumber(
+				bigger.mantissa - smaller.mantissa / Math.pow(10, diff),
+				bigger.exponent
+			)
 		}
-		let bigger: BigNumber = this;
-		let smaller: BigNumber = other;
-		if (other.exponent > this.exponent) {
-			bigger = other;
-			smaller = this;
-		}
-		let diff = bigger.exponent - smaller.exponent;
-		if (diff > 15) {
-			return new BigNumber(bigger.mantissa, bigger.exponent);
-		}
-		return new BigNumber(
-			bigger.mantissa - smaller.mantissa / Math.pow(10, diff),
-			bigger.exponent
-		);
 	}
 	increase(other: BigNumber) {
-		const added = this.add(other);
-		this.mantissa = added.mantissa;
-		this.exponent = added.exponent;
+		this.assign(this.add(other));
 	}
 	decrease(other: BigNumber) {
-		const subtracted = this.subtract(other);
-		this.mantissa = subtracted.mantissa;
-		this.exponent = subtracted.exponent;
+		this.assign(this.subtract(other));
 	}
 	multiply(other: BigNumber) {
-		return new BigNumber(this.mantissa * other.mantissa, this.exponent + other.exponent);
+		return new BigNumber(
+			this.mantissa * other.mantissa,
+			this.exponent + other.exponent
+		);
 	}
 	greater(other: BigNumber) {
-		return this.exponent > other.mantissa ? true : this.mantissa > other.mantissa
+		return any([
+			this.exponent > other.exponent,
+			all([
+				this.exponent === other.exponent,
+				this.mantissa > other.mantissa
+			])
+		])
+
 	}
 	lesser(other: BigNumber) {
-		return this.exponent < other.mantissa ? true : this.mantissa < other.mantissa
+		return any([
+			this.exponent < other.exponent,
+			all([
+				this.exponent === other.exponent,
+				this.mantissa < other.mantissa
+			])
+		])
 	}
 	toString() {
 		if (this.exponent < 3) {
@@ -90,6 +121,9 @@ class BigNumber {
 			this.mantissa.toFixed(2),
 			this.exponent
 		].join("e");
+	}
+	exists() {
+		return this.greater(new BigNumber())
 	}
 }
 const doc = document.body;
@@ -177,10 +211,10 @@ function runResource(resource: Resource, first: boolean) {
 		parent.appendChild(upgrade);
 		main?.appendChild(parent);
 		document.getElementById(resource.name)?.addEventListener("click", function () {
-			if (resource.rate.mantissa) {
-				if (resources.colonists.amount.greater(new BigNumber())) {
-					resource.rate.increase(new BigNumber(1));
+			if (resource.rate.exists()) {
+				if (resources.colonists.amount.exists()) {
 					resources.colonists.amount.decrease(new BigNumber(1));
+					resource.rate.increase(new BigNumber(1));
 				}
 			} else {
 				resource.amount.increase(new BigNumber(1))

@@ -1,20 +1,21 @@
-.PHONY : all build run
+.PHONY : all
 
-PY := python3
-DEV := false
-#-include dev.mk
+HAML := $(wildcard *.haml)
+HTML := $(patsubst %.haml,%.html,$(HAML))
 
-all : build run
-build : README.md style.css script.js index.html
-README.md : script.py data.yaml
-	@$(PY) script.py
-style.css : style.scss
-	@npx sass style.scss style.css
-script.js : script.ts
-	@tsc script.ts --target esnext
-index.html : index.haml
-	@haml index.haml > index.html
-run :
-ifeq ($(DEV),true)
-	@php -S localhost:
-endif
+SCSS := $(wildcard *.scss)
+CSS := $(patsubst %.scss,%.css,$(SCSS))
+
+TS := $(wildcard *.ts)
+JS := $(patsubst %.ts,%.js,$(TS))
+
+all : $(CSS) $(JS) $(HTML)
+
+%.css : %.scss
+	@npx sass $< $@
+
+%.js : %.ts
+	@tsc $< --target esnext
+
+%.html : %.haml
+	@haml $< > $@
