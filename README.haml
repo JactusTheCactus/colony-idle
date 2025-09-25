@@ -8,207 +8,195 @@
 		}
 	%body
 		%h1 Colony Idle
-		%section
-			%h2 Genres
-			%code
-				\#Colony,
-				\#Deity,
-				\#Fantasy,
-				\#Idle,
-				\#Incremental,
-				\#Management,
-				\#Simulator
-		%section
-			%h2 Software
-			%dl
-				%div
-					%dt OS
-					%dd Linux (WSL Ubuntu)
-				%div
-					%dt IDE
-					%dd VSCode
-				%div
-					%dt Languages
-					%dd
-						%table
+		- tags = ["Colony","Deity","Fantasy","Idle","Incremental","Management","Simulator"]
+		- tags.each.with_index do |tag, i|
+			- if i == tags.size - 1
+				%code= "##{tag}"
+			- else
+				= "<code>##{tag}</code>,"
+		%h2 Software
+		%dl
+			%div
+				%dt OS
+				%dd Linux (WSL Ubuntu)
+			%div
+				%dt IDE
+				%dd VSCode
+			%div
+				%dt Languages
+				%dd
+					%table
+						- langs = [["HAML + Ruby","[*.{haml,rb}]"],["SASS","[*.scss]"],["TypeScript","[*.ts]"]]
+						- langs.each do |lang|
 							%tr
-								%th HAML
+								%th= lang[0]
 								%td
-									%code [*.haml]
-							%tr
-								%th SASS
-								%td
-									%code [*.scss]
-							%tr
-								%th TypeScript
-								%td
-									%code [*.ts]
-		%section
-			%h2 Gameplay
-			%ul
-				%li
-					Earn Resources
-					%ul
-						%li
-							Faith
-							%ul
-								%li
-									Prestige Resource
-									%ul
-										%li Spent on permanent upgrades
-						%li
-							Food
-							%ul
-								%li
-									Deficit
-									%ul
-										%li Production penalty
-								%li
-									Surplus
-									%ul
-										%li Production bonus
-						%li Stone
-						%li Wood
-				%li
-					Employ colonists
-					%ul
-						%li
-							Faith
-							%ul
-								%li
-									Priest
-									%ul
-										%li Late-stage colony
-						%li
-							Food
-							%ul
-								%li
-									Farmer
-									%ul
-										%li Less speed
-										%li More yield
-								%li
-									Hunter
-									%ul
-										%li Less yield
-										%li More speed
-						%li
-							Stone
-							%ul
-								%li
-									Miner
-									%ul
-										%li Less speed
-										%li More yield
-								%li
-									Quarrier
-									%ul
-										%li Less yield
-										%li More speed
-						%li
-							Wood
-							%ul
-								%li
-									Forester
-									%ul
-										%li Less speed
-										%li More yield
-								%li
-									Lumberjack
-									%ul
-										%li Less yield
-										%li More speed
-				%li
-					Player
-					%ul
-						%li
-							Avatar
-							%ul
-								%li
-									Managing the colony
-									%ul
-										%li Assigning resources
-										%li Employing colonists
-								%li
-									Same colonist throughout the lifetime of a single colony
-									%ul
-										%li
-											Like other colonists, dies during the apocalypse
-											%ul
-												%li A new avatar is chosen at the start of a new colony
-										%li Personal health directly linked to the health of the colony
-						%li
-							Deity
-							%ul
-								%li
-									Apocalypse prestige
-									%ul
-										%li
-											Each domain has a specific apocalypse
-											%ul
-												%li
-													Each apocalypse is functionally identical
-													%ul
-														%li Choosing one apocalypse over another changes nothing about the next run
-												%li
-													Visually distinct
-													%ul
-														%li Just visual flavour
-										%li
-											End the world
-											%ul
-												%li
-													Start again with more power
-													%ul
-														%li
-															Achievements
-															%ul
-																%li Give permanent bonuses
-																%li Leave behind "relics" of past colonies
-														%li
-															Unlocks
-															%ul
-																%li
-																	Better domain tiers
-																	%ol
-																		%li
-																			%ol
-																				%li Earth
-																				%li Air
-																				%li Water
-																				%li Fire
-																		%li
-																			%ol
-																				%li Energy
-																		%li
-																			%ol
-																				%li Dark
-																				%li Light
-																%li
-																	Heroes
-																	%ul
-																		%li One-of-a-kind colonists with special skills / bonuses
-								%li
-									Different domains
-									%ul
-										%li Domain-specific buffs & debuffs
-										%li One domain per colony
-				%li
-					Spend resources
-					%ul
-						%li
-							Food
-							%ul
-								%li Birth colonists
+									%code= lang[1]
+		%h2 Gameplay
+		%ul
+			%li
+				Earn Resources
+				%ul
+					%li
+						Faith
+						%ul
+							%li
+								Prestige Resource
 								%ul
-									%li Limited by housing capacity
-						%li
-							Stone
+									%li Spent on permanent upgrades
+					%li
+						Food
+						%ul
+							%li
+								Deficit
+								%ul
+									%li Production penalty
+							%li
+								Surplus
+								%ul
+									%li Production bonus
+					%li Stone
+					%li Wood
+			%li
+				Employ colonists
+				%ul
+					%li
+						Faith
+						%ul
+							%li
+								Priest
+								%ul
+									%li Late-stage colony
+					%li
+						Food
+						%ul
+							%li
+								Farmer
+								%ul
+									%li Less speed
+									%li More yield
+							%li
+								Hunter
+								%ul
+									%li Less yield
+									%li More speed
+					%li
+						Stone
+						%ul
+							%li
+								Miner
+								%ul
+									%li Less speed
+									%li More yield
+							%li
+								Quarrier
+								%ul
+									%li Less yield
+									%li More speed
+					%li
+						Wood
+						%ul
+							%li
+								Forester
+								%ul
+									%li Less speed
+									%li More yield
+							%li
+								Lumberjack
+								%ul
+									%li Less yield
+									%li More speed
+			%li
+				Player
+				%ul
+					%li
+						Avatar
+						%ul
+							%li
+								Managing the colony
+								%ul
+									%li Assigning resources
+									%li Employing colonists
+							%li
+								Same colonist throughout the lifetime of a single colony
+								%ul
+									%li
+										Like other colonists, dies during the apocalypse
+										%ul
+											%li A new avatar is chosen at the start of a new colony
+									%li Personal health directly linked to the health of the colony
+					%li
+						Deity
+						%ul
+							%li
+								Apocalypse prestige
+								%ul
+									%li
+										Each domain has a specific apocalypse
+										%ul
+											%li
+												Each apocalypse is functionally identical
+												%ul
+													%li Choosing one apocalypse over another changes nothing about the next run
+											%li
+												Visually distinct
+												%ul
+													%li Just visual flavour
+									%li
+										End the world
+										%ul
+											%li
+												Start again with more power
+												%ul
+													%li
+														Achievements
+														%ul
+															%li Give permanent bonuses
+															%li Leave behind "relics" of past colonies
+													%li
+														Unlocks
+														%ul
+															%li
+																Better domain tiers
+																%ol
+																	%li
+																		%ol
+																			%li Earth
+																			%li Air
+																			%li Water
+																			%li Fire
+																	%li
+																		%ol
+																			%li Energy
+																	%li
+																		%ol
+																			%li Dark
+																			%li Light
+															%li
+																Heroes
+																%ul
+																	%li One-of-a-kind colonists with special skills / bonuses
+							%li
+								Different domains
+								%ul
+									%li Domain-specific buffs & debuffs
+									%li One domain per colony
+			%li
+				Spend resources
+				%ul
+					%li
+						Food
+						%ul
+							%li Birth colonists
 							%ul
-								%li Better tools
-								%li Bigger stone storage
-						%li
-							Wood
-							%ul
-								%li Bigger wood storage
-								%li More housing
+								%li Limited by housing capacity
+					%li
+						Stone
+						%ul
+							%li Better tools
+							%li Bigger stone storage
+					%li
+						Wood
+						%ul
+							%li Bigger wood storage
+							%li More housing
