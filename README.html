@@ -6,12 +6,12 @@
 </head>
 <body>
 <h1>Colony Idle</h1>
-&lt;code&gt;#Colony&lt;/code&gt;,
-&lt;code&gt;#Deity&lt;/code&gt;,
-&lt;code&gt;#Fantasy&lt;/code&gt;,
-&lt;code&gt;#Idle&lt;/code&gt;,
-&lt;code&gt;#Incremental&lt;/code&gt;,
-&lt;code&gt;#Management&lt;/code&gt;,
+<code>#Colony</code>,
+<code>#Deity</code>,
+<code>#Fantasy</code>,
+<code>#Idle</code>,
+<code>#Incremental</code>,
+<code>#Management</code>,
 <code>#Simulator</code>
 <h2>Software</h2>
 <dl>
