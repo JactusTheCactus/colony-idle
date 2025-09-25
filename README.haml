@@ -13,7 +13,7 @@
 			- if i == tags.size - 1
 				%code= "##{tag}"
 			- else
-				= "<code>##{tag}</code>,".html_safe
+				!= "<code>##{tag}</code>,"
 		%h2 Software
 		%dl
 			%div
