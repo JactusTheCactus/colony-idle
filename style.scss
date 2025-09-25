@@ -1,5 +1,10 @@
 body {
 	font: 20pt Verdana;
+	vr {
+		border-left: 1px solid gray;
+		height: 50px;
+		margin: 0 10px;
+	}
 
 	#resources {
 		display: flex;
