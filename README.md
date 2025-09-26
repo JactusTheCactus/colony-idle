@@ -96,6 +96,7 @@ Priest
 </li>
 <li>
 Food
+<ul>
 <dl>
 <dt>Farmer</dt>
 <dd>Less speed</dd>
@@ -104,6 +105,7 @@ Food
 <dd>Less yield</dd>
 <dd>More speed</dd>
 </dl>
+</ul>
 </li>
 <li>
 Stone
