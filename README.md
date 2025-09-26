@@ -28,13 +28,13 @@
 <dd>
 <table>
 <tr>
-<th>HAML + Ruby</th>
+<th>Haml</th>
 <td>
 <code>[*.{haml,rb}]</code>
 </td>
 </tr>
 <tr>
-<th>SASS</th>
+<th>Sass</th>
 <td>
 <code>[*.scss]</code>
 </td>
