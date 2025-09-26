@@ -110,20 +110,14 @@ Food
 <li>
 Stone
 <ul>
-<li>
-Miner
-<ul>
-<li>Less speed</li>
-<li>More yield</li>
-</ul>
-</li>
-<li>
-Quarrier
-<ul>
-<li>Less yield</li>
-<li>More speed</li>
-</ul>
-</li>
+<dl>
+<dt>Miner</dt>
+<dd>Less speed</dd>
+<dd>More yield</dd>
+<dt>Quarrier</dt>
+<dd>Less yield</dd>
+<dd>More speed</dd>
+</dl>
 </ul>
 </li>
 <li>
