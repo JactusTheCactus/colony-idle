@@ -68,18 +68,12 @@ Prestige Resource
 <li>
 Food
 <ul>
-<li>
-Deficit
-<ul>
-<li>Production penalty</li>
-</ul>
-</li>
-<li>
-Surplus
-<ul>
-<li>Production bonus</li>
-</ul>
-</li>
+<dl>
+<dt>Deficit</dt>
+<dd>Production penalty</dd>
+<dt>Surplus</dt>
+<dd>Production bonus</dd>
+</dl>
 </ul>
 </li>
 <li>Stone</li>
