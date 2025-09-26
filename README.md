@@ -102,22 +102,14 @@ Priest
 </li>
 <li>
 Food
-<ul>
-<li>
-Farmer
-<ul>
-<li>Less speed</li>
-<li>More yield</li>
-</ul>
-</li>
-<li>
-Hunter
-<ul>
-<li>Less yield</li>
-<li>More speed</li>
-</ul>
-</li>
-</ul>
+<dl>
+<dt>Farmer</dt>
+<dd>Less speed</dd>
+<dd>More yield</dd>
+<dt>Hunter</dt>
+<dd>Less yield</dd>
+<dd>More speed</dd>
+</dl>
 </li>
 <li>
 Stone
