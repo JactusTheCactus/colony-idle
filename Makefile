@@ -1,18 +1,29 @@
-.PHONY : all
+.PHONY : all format clean pug
 
-HAML := $(wildcard *.haml)
-HTML := $(patsubst %.haml,%.html,$(HAML))
-SCSS := $(wildcard *.scss)
-CSS := $(patsubst %.scss,%.css,$(SCSS))
+PUG := $(wildcard *.pug)
+PAGE := $(PUG:.pug=.html) $(PUG:.pug=.md)
+SASS := $(wildcard *.scss)
+STYLE := $(SASS:.scss=.css)
 TS := $(wildcard *.ts)
-JS := $(patsubst %.ts,%.js,$(TS))
+SCRIPT := $(TS:.ts=.js)
 
-all : $(CSS) $(JS) $(HTML) README.md
+trash = $(wildcard *.map .sass-cache)
+
+all : $(STYLE) $(SCRIPT) pug format clean
 %.css : %.scss
 	@npx sass $< $@
 %.js : %.ts
-	@tsc $< --target esnext
-%.html : %.haml build.rb
-	@ruby build.rb $< $@
-README.md : README.html
-	@cat README.html > README.md
+	@tsc $< \
+		--target esnext \
+		--module nodenext \
+		--esModuleInterop false \
+		--forceConsistentCasingInFileNames true \
+		--strict true \
+		--skipLibCheck true \
+		--moduleResolution nodenext
+pug : $(PUG) page.js
+	@node page.js
+format :
+	@npx prettier . --write > /dev/null
+clean :
+	@rm -rf $(trash)

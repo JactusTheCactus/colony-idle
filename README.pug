@@ -1,0 +1,207 @@
+-
+	tags = [
+		"Colony",
+		"Deity",
+		"Fantasy",
+		"Idle",
+		"Incremental",
+		"Management",
+		"Simulator"
+	]
+-
+	langs = [
+		["Pug","[*.pug]"],
+		["Sass","[*.scss]"],
+		["TypeScript","[*.ts]"]
+	]
+-
+	elements = [
+		[
+			"Earth",
+			"Air",
+			"Water",
+			"Fire"
+		],
+		[
+			"Energy"
+		],
+		[
+			"Dark",
+			"Light"
+		]
+	]
+- space = "&#x20;"
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		link(
+			href="style.css",
+			rel="stylesheet"
+		)
+	body
+		h1 Colony Idle
+		for tag, i in tags
+			code ##{tag}
+			if i !== tags.length -1
+				span ,!{space}
+		h2 Software
+		dl
+			div
+				dt OS
+				dd Linux (WSL Ubuntu)
+			div
+				dt IDE
+				dd VSCode
+			div
+				dt Languages
+				dd
+					table
+						for lang in langs
+							tr
+								th= lang[0]
+								td
+									code= lang[1]
+		h2 Gameplay
+		ul
+			li
+				span Earn Resources
+				ul
+					li
+						span Faith
+						ul: li
+							Prestige Resource
+							ul: li Spent on permanent upgrades
+					li
+						span Food
+						ul
+							dl
+								dt Deficit
+								dd Production penalty
+								dt Surplus
+								dd Production bonus
+					li Stone
+					li Wood
+			li
+				span Employ colonists
+				ul
+					li
+						span Faith
+						ul
+							li
+								span Priest
+								ul
+									li Late-stage colony
+					li
+						span Food
+						ul
+							dl
+								dt Farmer
+								dd Less speed
+								dd More yield
+								dt Hunter
+								dd Less yield
+								dd More speed
+					li
+						span Stone
+						ul
+							dl
+								dt Miner
+								dd Less speed
+								dd More yield
+								dt Quarrier
+								dd Less yield
+								dd More speed
+					li
+						span Wood
+						ul
+							dl
+								dt Forester
+								dd Less speed
+								dd More yield
+								dt Lumberjack
+								dd Less yield
+								dd More speed
+			li
+				span Player
+				ul
+					li
+						span Avatar
+						ul
+							li
+								span Managing the colony
+								ul
+									li Assigning resources
+									li Employing colonists
+							li
+								span Same colonist throughout the lifetime of a single colony
+								ul
+									li
+										span Like other colonists, dies during the apocalypse
+										ul
+											li A new avatar is chosen at the start of a new colony
+									li Personal health directly linked to the health of the colony
+					li
+						span Deity
+						ul
+							li
+								span Apocalypse prestige
+								ul
+									li
+										Each domain has a specific apocalypse
+										ul
+											li
+												span Each apocalypse is functionally identical
+												ul
+													li Choosing one apocalypse over another changes nothing about the next run
+											li
+												span Visually distinct
+												ul
+													li Just visual flavour
+									li
+										span End the world
+										ul
+											li
+												span Start again with more power
+												ul
+													li
+														span Achievements
+														ul
+															li Give permanent bonuses
+															li Leave behind "relics" of past colonies
+													li
+														span Unlocks
+														ul
+															li
+																span Better domain tiers
+																ol
+																	for a in elements
+																		li: ol
+																			for b in a
+																				li= b
+															li
+																span Heroes
+																ul: li One-of-a-kind colonists with special skills / bonuses
+							li
+								span Different domains
+								ul
+									li Domain-specific buffs &amp; debuffs
+									li One domain per colony
+			li
+				span Spend resources
+				ul
+					li
+						span Food
+						ul
+							li Birth colonists
+							ul: li Limited by housing capacity
+					li
+						span Stone
+						ul
+							li Better tools
+							li Bigger stone storage
+					li
+						span Wood
+						ul
+							li Bigger wood storage
+							li More housing

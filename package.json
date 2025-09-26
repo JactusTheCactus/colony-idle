@@ -1,23 +1,30 @@
 {
-  "name": "colony-idle",
-  "version": "1.0.0",
-  "description": "Colony Idle ===========",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JactusTheCactus/colony-idle.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JactusTheCactus/colony-idle/issues"
-  },
-  "homepage": "https://github.com/JactusTheCactus/colony-idle#readme",
-  "dependencies": {
-    "sass": "^1.93.1"
-  }
+	"name": "colony-idle",
+	"version": "1.0.0",
+	"description": "Colony Idle ===========",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JactusTheCactus/colony-idle.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/JactusTheCactus/colony-idle/issues"
+	},
+	"homepage": "https://github.com/JactusTheCactus/colony-idle#readme",
+	"dependencies": {
+		"prettier": "^3.6.2",
+		"pug": "^3.0.3",
+		"sass": "^1.93.1"
+	},
+	"devDependencies": {
+		"@types/node": "^24.5.2",
+		"@types/pug": "^2.0.10"
+	}
 }

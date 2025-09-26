@@ -1,0 +1,11 @@
+experimentalTernaries: true
+semi: true
+singleQuote: false
+quoteProps: as-needed
+trailingComma: all
+bracketSpacing: false
+objectWrap: preserve
+bracketSameLine: false
+arrowParens: avoid
+embeddedLanguageFormatting: auto
+singleAttributePerLine: true
