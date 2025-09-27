@@ -1,9 +1,17 @@
-mixin ext(extensions)
-	if extensions.length > 1
-		=`[*.{${extensions.join(",")}}]`
-	else
-		=`[*.${extensions}]`
-- space = "&#x20;";
+-
+	function ext(extensions) {
+		if (extensions.length > 1) {
+			return `[*.{${extensions.join(",")}}]`
+		} else {
+			return `[*.${extensions}]`
+		}
+	}
+-
+	function html(hex) {
+		return `&#x${hex};`
+	}
+- space = html("20")
+- arrow = html("2192")
 -
 	tags = [
 		"Colony",
@@ -72,14 +80,17 @@ html(lang="en")
 			dt IDE
 			dd VSCode
 			dt Languages
-			dd
-				dl
-					for lang in langs
-						dt #{lang[0][0]} => #{lang[1][0]}
-						dd
-							code: +ext(lang[0][1])
-							=` => `
-							code: +ext(lang[1][1])
+			dd: ul
+				for lang in langs
+					li: table
+						tr
+							th= lang[0][0]
+							th!= arrow
+							th= lang[1][0]
+						tr
+							td: code= ext(lang[0][1])
+							td!= arrow
+							td: code= ext(lang[1][1])
 		h2 Gameplay
 		ul
 			li

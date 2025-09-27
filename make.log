@@ -1,9 +1,1 @@
-==========
-(PAGES) index.html README.md
-(SCSS) style.scss
-(TS) module.d.ts page.ts script.ts
-==========
-index.html 60ms
-page.js 56ms
-page.ts 30ms
-README.md 22ms
+README.md 31ms
