@@ -86,9 +86,9 @@ html(lang="en")
 				ul
 					li
 						span Faith
-						ul: li
-							span Priest
-							ul: li Late-stage colony
+						ul: dl
+							dt Priest
+							dd Late-stage colony
 					li
 						span Food
 						ul: dl
@@ -164,11 +164,12 @@ html(lang="en")
 													ul
 														li
 															span Better domain tiers
-															ol
-																for a in elements
-																	li: ol
-																		for b in a
-																			li= b
+															dl
+																for t,ti in elements
+																	dt Tier #{ti + 1}
+																	ol
+																		for e in t
+																			dd: li= e
 														li
 															span Heroes
 															ul: li One-of-a-kind colonists with special skills / bonuses
@@ -179,19 +180,16 @@ html(lang="en")
 									li One domain per colony
 			li
 				span Spend resources
-				ul
-					li
-						span Food
-						ul: li
-							span Birth colonists
-							ul: li Limited by housing capacity
-					li
-						span Stone
-						ul
-							li Better tools
-							li Bigger stone storage
-					li
-						span Wood
-						ul
-							li Bigger wood storage
-							li More housing
+				dl
+					dt Food
+					dd: li
+						span Birth colonists
+						ul: li Limited by housing capacity
+					dt Stone
+					dd
+						li Better tools
+						li Bigger stone storage
+					dt Wood
+					dd
+						li Bigger wood storage
+						li More housing
