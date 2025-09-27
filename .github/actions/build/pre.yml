@@ -1,0 +1,7 @@
+name: Pre
+run: |
+  sudo apt-get update
+  sudo apt-get install -y build-essential
+  npm ci
+  git config user.email "github-actions[bot]@users.noreply.github.com"
+  git config user.name "GitHub Actions Bot"

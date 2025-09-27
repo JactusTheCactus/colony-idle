@@ -1,0 +1,5 @@
+name: Post
+run: |
+  git add .
+  git commit -m "Commit Make changes" || :
+  git push origin main
