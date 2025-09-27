@@ -80,17 +80,17 @@ html(lang="en")
 			dt IDE
 			dd VSCode
 			dt Languages
-			dd: ul
-				for lang in langs
-					li: table
-						tr
-							th= lang[0][0]
-							th!= arrow
-							th= lang[1][0]
-						tr
-							td: code= ext(lang[0][1])
-							td!= arrow
-							td: code= ext(lang[1][1])
+			dd
+				table
+					for lang in langs
+							tr
+								th= lang[0][0]
+								th!= arrow
+								th= lang[1][0]
+							tr
+								td: code= ext(lang[0][1])
+								td!= arrow
+								td: code= ext(lang[1][1])
 		h2 Gameplay
 		ul
 			li
