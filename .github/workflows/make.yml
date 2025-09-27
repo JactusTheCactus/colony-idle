@@ -15,4 +15,6 @@ jobs:
         with:
           node-version: lts/*
           cache: npm
-      - uses: ./.github/actions/build
+      - uses: ./.github/actions/pre
+      - uses: ./.github/actions/main
+      - uses: ./.github/actions/post
