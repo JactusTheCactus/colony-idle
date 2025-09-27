@@ -1,0 +1,12 @@
+npx sass style.scss style.css
+rm -rf style.css.map
+tsc module.d.ts \
+	--target esnext \
+	--skipLibCheck true
+tsc page.ts \
+	--target esnext \
+	--skipLibCheck true
+tsc script.ts \
+	--target esnext \
+	--skipLibCheck true
+node page.js
