@@ -22,4 +22,4 @@ jobs:
         with:
           ruby-version: "3.2"
       - name: Make & commit
-        run: ./actions.sh
+        run: ./action.sh
