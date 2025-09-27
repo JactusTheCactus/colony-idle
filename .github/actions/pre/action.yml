@@ -1,5 +1,6 @@
 name: Install Prerequisites & Configure Git
 runs:
+  using: composite
   steps:
     - run: |
         sudo apt-get update
