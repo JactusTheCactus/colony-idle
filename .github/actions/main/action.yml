@@ -4,3 +4,4 @@ runs:
     - run: |
         rm -rf *.css *.html *.js *.md
         make
+      shell: bash
