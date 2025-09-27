@@ -10,9 +10,18 @@
 	]
 -
 	langs = [
-		["Pug","[*.pug]"],
-		["Sass","[*.scss]"],
-		["TypeScript","[*.ts]"]
+		[
+			["Pug","pug"],
+			["HTML & Markdown","{html,md}"]
+		],
+		[
+			["Sass","scss"],
+			["CSS","css"]
+		],
+		[
+			["TypeScript","ts"],
+			["JavaScript","js"]
+		]
 	]
 -
 	elements = [
@@ -56,12 +65,13 @@ html(lang="en")
 			div
 				dt Languages
 				dd
-					table
+					dl
 						for lang in langs
-							tr
-								th= lang[0]
-								td
-									code= lang[1]
+							dt #{lang[0][0]} => #{lang[1][0]}
+							dd
+								code [*.#{lang[0][1]}]
+								span !{space}=>!{space}
+								code [*.#{lang[1][1]}]
 		h2 Gameplay
 		ul
 			li
@@ -70,7 +80,7 @@ html(lang="en")
 					li
 						span Faith
 						ul: li
-							Prestige Resource
+							span Prestige Resource
 							ul: li Spent on permanent upgrades
 					li
 						span Food
@@ -141,7 +151,7 @@ html(lang="en")
 								span Apocalypse prestige
 								ul
 									li
-										Each domain has a specific apocalypse
+										span Each domain has a specific apocalypse
 										ul
 											li
 												span Each apocalypse is functionally identical
