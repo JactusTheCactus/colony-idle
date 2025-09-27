@@ -29,7 +29,9 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git config user.name "GitHub Actions Bot"
       - name: Make & commit
-        run: ./action.sh
+        run: |
+          rm -rf *.css *.html *.js *.md
+        # make
       - name: Post
         run: |
           git add .
