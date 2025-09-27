@@ -1,11 +1,8 @@
--
-	function ext(extensions) {
-		if (extensions.length > 1) {
-			return `[*.{${extensions.join(",")}}]`
-		} else {
-			return `[*.${extensions}]`
-		}
-	}
+mixin ext(extensions)
+	if extensions.length > 1
+		code= `[*.{${extensions.join(",")}}]`
+	else
+		code= `[*.${extensions}]`
 -
 	function html(hex) {
 		return `&#x${hex};`
@@ -88,9 +85,9 @@ html(lang="en")
 								th!= arrow
 								th= lang[1][0]
 							tr
-								td: code= ext(lang[0][1])
+								td: +ext(lang[0][1])
 								td!= arrow
-								td: code= ext(lang[1][1])
+								td: +ext(lang[1][1])
 		h2 Gameplay
 		ul
 			li
