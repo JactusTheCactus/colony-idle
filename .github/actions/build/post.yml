@@ -1,4 +1,4 @@
-name: Post
+name: Commit
 run: |
   git add .
   git commit -m "Commit Make changes" || :
