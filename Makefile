@@ -1,5 +1,5 @@
-.PHONY : main post
+.PHONY : all main post
 
-: main post
+all : main post
 include make/main.mk
 include make/post.mk

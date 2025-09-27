@@ -4,7 +4,7 @@
 		{
 			"label": "Make",
 			"type": "shell",
-			"command": "rm -rf *.css *.html *.js *.map *.md && make > make.log",
+			"command": "make > make.log",
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
