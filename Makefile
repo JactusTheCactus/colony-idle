@@ -1,15 +1,9 @@
-.PHONY : all format clean pug
+.PHONY : all format clean pug test
 
-PUG := $(wildcard *.pug)
-PAGE := $(PUG:.pug=.html) $(PUG:.pug=.md)
 SASS := $(wildcard *.scss)
-STYLE := $(SASS:.scss=.css)
 TS := $(wildcard *.ts)
-SCRIPT := $(TS:.ts=.js)
 
-trash = $(wildcard *.map .sass-cache)
-
-all : $(STYLE) $(SCRIPT) pug format clean
+all : $(SASS:.scss=.css) $(TS:.ts=.js) pug format clean
 %.css : %.scss
 	@npx sass $< $@
 %.js : %.ts
@@ -21,9 +15,9 @@ all : $(STYLE) $(SCRIPT) pug format clean
 		--strict true \
 		--skipLibCheck true \
 		--moduleResolution nodenext
-pug : $(PUG) page.js
+pug : $(wildcard *.pug) page.js
 	@node page.js
 format :
 	@npx prettier . --write > /dev/null
 clean :
-	@rm -rf $(trash)
+	@rm -rf $(wildcard *.map .sass-cache)
