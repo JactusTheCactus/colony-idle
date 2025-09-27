@@ -1,5 +1,6 @@
 import * as pug from "pug";
 import * as fs from "fs";
+const args: string[] = process.argv.slice(2);
 function writeFile(path: string, content: string) {
 	fs.writeFile(path, content, (err: any) => {
 		if (err) {
@@ -7,11 +8,9 @@ function writeFile(path: string, content: string) {
 		}
 	});
 }
-function compilePug(inputPug: string, outputHtml: string = "", type: string = "html") {
-	writeFile(
-		`${outputHtml ? outputHtml : inputPug}.${type}`,
-		pug.compileFile(`${inputPug}.pug`)({}),
-	);
+function compilePug(file: string) {
+	writeFile(file, pug.compileFile(`${file.split(".")[0]}.pug`)({}));
 }
-compilePug("README", undefined, "md");
-compilePug("index");
+args.map(i => {
+	compilePug(i);
+});

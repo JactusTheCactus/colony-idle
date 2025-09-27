@@ -1,3 +1,9 @@
+mixin ext(extensions)
+	if extensions.length > 1
+		=`[*.{${extensions.join(",")}}]`
+	else
+		=`[*.${extensions}]`
+- space = "&#x20;";
 -
 	tags = [
 		"Colony",
@@ -11,16 +17,22 @@
 -
 	langs = [
 		[
-			["Pug","pug"],
-			["HTML & Markdown","{html,md}"]
+			["Pug",
+				["pug"]],
+			["HTML & Markdown",
+				["html","md"]]
 		],
 		[
-			["Sass","scss"],
-			["CSS","css"]
+			["Sass",
+				["scss"]],
+			["CSS",
+				["css"]]
 		],
 		[
-			["TypeScript","ts"],
-			["JavaScript","js"]
+			["TypeScript",
+				["ts"]],
+			["JavaScript",
+				["js"]]
 		]
 	]
 -
@@ -39,51 +51,47 @@
 			"Light"
 		]
 	]
-- space = "&#x20;"
 doctype html
 html(lang="en")
 	head
 		meta(charset="UTF-8")
 		link(
-			href="style.css",
+			href="style.css"
 			rel="stylesheet"
 		)
 	body
 		h1 Colony Idle
 		for tag, i in tags
 			code ##{tag}
-			if i !== tags.length -1
-				span ,!{space}
+			if i !== tags.length-1
+				| ,!{space}
 		h2 Software
 		dl
-			div
-				dt OS
-				dd Linux (WSL Ubuntu)
-			div
-				dt IDE
-				dd VSCode
-			div
-				dt Languages
-				dd
-					dl
-						for lang in langs
-							dt #{lang[0][0]} => #{lang[1][0]}
-							dd
-								code [*.#{lang[0][1]}]
-								span !{space}=>!{space}
-								code [*.#{lang[1][1]}]
+			dt OS
+			dd Linux (WSL Ubuntu)
+			dt IDE
+			dd VSCode
+			dt Languages
+			dd
+				dl
+					for lang in langs
+						dt #{lang[0][0]} => #{lang[1][0]}
+						dd
+							code: +ext(lang[0][1])
+							=` => `
+							code: +ext(lang[1][1])
 		h2 Gameplay
 		ul
 			li
-				span Earn Resources
+				| Earn Resources
 				ul
 					li
-						span Faith
+						| Faith
 						ul: li
-							span Prestige Resource
+							| Prestige Resource
 							ul: li Spent on permanent upgrades
 					li
-						span Food
+						| Food
 						ul: dl
 							dt Deficit
 							dd Production penalty
@@ -92,15 +100,15 @@ html(lang="en")
 					li Stone
 					li Wood
 			li
-				span Employ colonists
+				| Employ colonists
 				ul
 					li
-						span Faith
+						| Faith
 						ul: dl
 							dt Priest
 							dd Late-stage colony
 					li
-						span Food
+						| Food
 						ul: dl
 							dt Farmer
 							dd Less speed
@@ -109,7 +117,7 @@ html(lang="en")
 							dd Less yield
 							dd More speed
 					li
-						span Stone
+						| Stone
 						ul: dl
 							dt Miner
 							dd Less speed
@@ -118,7 +126,7 @@ html(lang="en")
 							dd Less yield
 							dd More speed
 					li
-						span Wood
+						| Wood
 						ul: dl
 							dt Forester
 							dd Less speed
@@ -127,53 +135,53 @@ html(lang="en")
 							dd Less yield
 							dd More speed
 			li
-				span Player
+				| Player
 				ul
 					li
-						span Avatar
+						| Avatar
 						ul
 							li
-								span Managing the colony
+								| Managing the colony
 								ul
 									li Assigning resources
 									li Employing colonists
 							li
-								span Same colonist throughout the lifetime of a single colony
+								| Same colonist throughout the lifetime of a single colony
 								ul
 									li
-										span Like other colonists, dies during the apocalypse
+										| Like other colonists, dies during the apocalypse
 										ul: li A new avatar is chosen at the start of a new colony
 									li Personal health directly linked to the health of the colony
 					li
-						span Deity
+						| Deity
 						ul
 							li
-								span Apocalypse prestige
+								| Apocalypse prestige
 								ul
 									li
-										span Each domain has a specific apocalypse
+										| Each domain has a specific apocalypse
 										ul
 											li
-												span Each apocalypse is functionally identical
+												| Each apocalypse is functionally identical
 												ul: li Choosing one apocalypse over another changes nothing about the next run
 											li
-												span Visually distinct
+												| Visually distinct
 												ul: li Just visual flavour
 									li
-										span End the world
+										| End the world
 										ul: li
-											span Start again with more power
+											| Start again with more power
 											ul
 												li
-													span Achievements
+													| Achievements
 													ul
 														li Give permanent bonuses
 														li Leave behind "relics" of past colonies
 												li
-													span Unlocks
+													| Unlocks
 													ul
 														li
-															span Better domain tiers
+															| Better domain tiers
 															dl
 																for t,ti in elements
 																	dt Tier #{ti + 1}
@@ -181,19 +189,19 @@ html(lang="en")
 																		for e in t
 																			dd: li= e
 														li
-															span Heroes
+															| Heroes
 															ul: li One-of-a-kind colonists with special skills / bonuses
 							li
-								span Different domains
+								| Different domains
 								ul
-									li Domain-specific buffs &amp; debuffs
+									li Domain-specific buffs & debuffs
 									li One domain per colony
 			li
-				span Spend resources
+				| Spend resources
 				dl
 					dt Food
 					dd: li
-						span Birth colonists
+						| Birth colonists
 						ul: li Limited by housing capacity
 					dt Stone
 					dd

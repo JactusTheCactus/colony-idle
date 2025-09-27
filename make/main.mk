@@ -1,13 +1,7 @@
-.PHONY : main
-
-PUG := $(wildcard *.pug)
+PAGES := $(wildcard *.html *.md)
 SCSS := $(wildcard *.scss)
 TS := $(wildcard *.ts)
-
-PAGES = $(PUG:.pug=.html) $(PUG:.pug=.md)
-STYLES = $(SCSS:.scss=.css)
-
-main : $(STYLES) $(TS:.ts=.js) $(PAGES)
+main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES)
 %.css : %.scss
 	npx sass $< $@
 	rm -rf $@.map
@@ -15,5 +9,7 @@ main : $(STYLES) $(TS:.ts=.js) $(PAGES)
 	tsc $< \
 		--target esnext \
 		--skipLibCheck true
-$(PAGES) &: $(PUG) page.js
-	node page.js
+%.html : %.pug page.js
+	node page.js $@
+%.md : %.pug page.js
+	node page.js $@

@@ -1,5 +1,5 @@
-.PHONY : clean format post
-
+.PHONY : format
 post : format
 format :
-	npx prettier . --write > /dev/null
+	npx prettier . --write
+	./clean.pl
