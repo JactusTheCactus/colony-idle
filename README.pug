@@ -74,12 +74,11 @@ html(lang="en")
 							ul: li Spent on permanent upgrades
 					li
 						span Food
-						ul
-							dl
-								dt Deficit
-								dd Production penalty
-								dt Surplus
-								dd Production bonus
+						ul: dl
+							dt Deficit
+							dd Production penalty
+							dt Surplus
+							dd Production bonus
 					li Stone
 					li Wood
 			li
@@ -87,41 +86,36 @@ html(lang="en")
 				ul
 					li
 						span Faith
-						ul
-							li
-								span Priest
-								ul
-									li Late-stage colony
+						ul: li
+							span Priest
+							ul: li Late-stage colony
 					li
 						span Food
-						ul
-							dl
-								dt Farmer
-								dd Less speed
-								dd More yield
-								dt Hunter
-								dd Less yield
-								dd More speed
+						ul: dl
+							dt Farmer
+							dd Less speed
+							dd More yield
+							dt Hunter
+							dd Less yield
+							dd More speed
 					li
 						span Stone
-						ul
-							dl
-								dt Miner
-								dd Less speed
-								dd More yield
-								dt Quarrier
-								dd Less yield
-								dd More speed
+						ul: dl
+							dt Miner
+							dd Less speed
+							dd More yield
+							dt Quarrier
+							dd Less yield
+							dd More speed
 					li
 						span Wood
-						ul
-							dl
-								dt Forester
-								dd Less speed
-								dd More yield
-								dt Lumberjack
-								dd Less yield
-								dd More speed
+						ul: dl
+							dt Forester
+							dd Less speed
+							dd More yield
+							dt Lumberjack
+							dd Less yield
+							dd More speed
 			li
 				span Player
 				ul
@@ -138,8 +132,7 @@ html(lang="en")
 								ul
 									li
 										span Like other colonists, dies during the apocalypse
-										ul
-											li A new avatar is chosen at the start of a new colony
+										ul: li A new avatar is chosen at the start of a new colony
 									li Personal health directly linked to the health of the colony
 					li
 						span Deity
@@ -152,36 +145,33 @@ html(lang="en")
 										ul
 											li
 												span Each apocalypse is functionally identical
-												ul
-													li Choosing one apocalypse over another changes nothing about the next run
+												ul: li Choosing one apocalypse over another changes nothing about the next run
 											li
 												span Visually distinct
-												ul
-													li Just visual flavour
+												ul: li Just visual flavour
 									li
 										span End the world
-										ul
-											li
-												span Start again with more power
-												ul
-													li
-														span Achievements
-														ul
-															li Give permanent bonuses
-															li Leave behind "relics" of past colonies
-													li
-														span Unlocks
-														ul
-															li
-																span Better domain tiers
-																ol
-																	for a in elements
-																		li: ol
-																			for b in a
-																				li= b
-															li
-																span Heroes
-																ul: li One-of-a-kind colonists with special skills / bonuses
+										ul: li
+											span Start again with more power
+											ul
+												li
+													span Achievements
+													ul
+														li Give permanent bonuses
+														li Leave behind "relics" of past colonies
+												li
+													span Unlocks
+													ul
+														li
+															span Better domain tiers
+															ol
+																for a in elements
+																	li: ol
+																		for b in a
+																			li= b
+														li
+															span Heroes
+															ul: li One-of-a-kind colonists with special skills / bonuses
 							li
 								span Different domains
 								ul
@@ -192,8 +182,8 @@ html(lang="en")
 				ul
 					li
 						span Food
-						ul
-							li Birth colonists
+						ul: li
+							span Birth colonists
 							ul: li Limited by housing capacity
 					li
 						span Stone
