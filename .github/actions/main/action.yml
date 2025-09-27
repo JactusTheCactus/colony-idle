@@ -1,4 +1,6 @@
 name: Make
-run: |
-  rm -rf *.css *.html *.js *.md
-  make
+runs:
+  steps:
+  - run: |
+      rm -rf *.css *.html *.js *.md
+      make
