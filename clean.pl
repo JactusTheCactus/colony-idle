@@ -14,7 +14,7 @@ sub inplace_substitutions {
 		eval "\$content =~ s/$pattern/$replacement/$flags;";
 		die "Bad substitution ($pattern -> $replacement /$flags): $@" if $@;
 	}
-	open my $out, ">", $filename or die "Can't write $filename: $!";
+	open my $out, ">", "./$filename" or die "Can't write $filename: $!";
 	print $out $content;
 	close $out;
 }
