@@ -1,5 +1,5 @@
 .PHONY : all main post
-.SILENT :
+#.SILENT :
 .ONESHELL :
 all : pre main post
 include make/pre.mk
