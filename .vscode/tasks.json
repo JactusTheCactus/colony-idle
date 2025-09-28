@@ -21,7 +21,7 @@
 		},
 		{
 			"label": "Test",
-			"command": "node ./test.js > test.md",
+			"command": "make test.md > test.md",
 			"group": {
 				"kind": "build",
 				"isDefault": false
