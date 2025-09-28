@@ -3,6 +3,6 @@ runs:
   using: composite
   steps:
     - run: |
-        rm -rf *.css *.html *.js *.md
+        find . -type f -name '*.css' -o -name '*.html' -o -name '*.js' -o -name '*.md' | xargs touch
         make
       shell: bash
