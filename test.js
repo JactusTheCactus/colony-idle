@@ -1,7 +1,10 @@
 function capitalize(str) {
-	return str.length > 1 ?
-			[str.charAt(0).toUpperCase(), str.slice(1).toLowerCase()].join("")
-		:	str.toUpperCase();
+	return str.length > 1
+		? [
+			str.charAt(0).toUpperCase(),
+			str.slice(1).toLowerCase()
+		].join("")
+		: str.toUpperCase();
 }
 function join(arr, joinerMain = ", ", joinerFinal = ", ") {
 	const last = arr.pop();
@@ -143,7 +146,7 @@ Object.entries(lang).forEach(([k, v]) => {
 	`\`Cascadic\` is an Alphabet, with each Letter (${or(["C", "V"].map(i => `\`${i}\``))}) pair listed`,
 	"`Stratic` consonants have no inherent value",
 	"`U__` is absent from `Stratic`, as the dialect does not have the sound, but the `Cascadic` dialect does",
-	["Numerals in both scripts are `base-12`", `(${and("1 2 3 4 5 6 7 8 9 10 11".split(/\s+/))})`],
+	["Numerals in both scripts are `base-12`", `(${and("0 1 2 3 4 5 6 7 8 9 10 11".split(/\s+/).map(i => `\`${i}\``))})`],
 ].forEach((n, i) => {
 	if (n instanceof Array) {
 		n = n.join(" ");
