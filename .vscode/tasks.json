@@ -8,6 +8,25 @@
 			"problemMatcher": [],
 			"group": {
 				"kind": "build",
+				"isDefault": false
+			},
+			"presentation": {
+				"echo": false,
+				"reveal": "always",
+				"panel": "dedicated",
+				"showReuseMessage": false,
+				"clear": true,
+				"revealProblems": "onProblem",
+				"close": true
+			}
+		},
+		{
+			"label": "Test",
+			"type": "shell",
+			"command": "node ./test.js > test.md",
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
 				"isDefault": true
 			},
 			"presentation": {

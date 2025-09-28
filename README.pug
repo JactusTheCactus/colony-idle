@@ -1,11 +1,22 @@
 mixin ext(extensions)
+	- let out;
 	if extensions.length > 1
-		code= `[*.{${extensions.join(",")}}]`
+		- out = `{${extensions.join(",")}}`
 	else
-		code= `[*.${extensions}]`
+		- out = extensions[0]
+	code= `[*.${out}]`
 -
 	function html(hex) {
 		return `&#x${hex};`
+	}
+-
+	function join(arr) {
+		const last = arr.pop();
+		const joined = [
+			arr.join(", "),
+			last
+		].join(" & ");
+		return joined
 	}
 - space = html("20")
 - arrow = html("2192")
@@ -22,22 +33,34 @@ mixin ext(extensions)
 -
 	langs = [
 		[
-			["Pug",
-				["pug"]],
-			["HTML & Markdown",
-				["html","md"]]
+			[
+				["Pug"],
+				["pug"]
+			],
+			[
+				["HTML","Markdown"],
+				["html","md"]
+			]
 		],
 		[
-			["Sass",
-				["scss"]],
-			["CSS",
-				["css"]]
+			[
+				["Sass"],
+				["scss"]
+			],
+			[
+				["CSS"],
+				["css"]
+			]
 		],
 		[
-			["TypeScript",
-				["ts"]],
-			["JavaScript",
-				["js"]]
+			[
+				["TypeScript"],
+				["ts"]
+			],
+			[
+				["JavaScript"],
+				["js"]
+			]
 		]
 	]
 -
@@ -81,12 +104,12 @@ html(lang="en")
 				table
 					for lang in langs
 							tr
-								th= lang[0][0]
+								th= join(lang[0][0])
 								th!= arrow
-								th= lang[1][0]
+								th= join(lang[1][0])
 							tr
 								td: +ext(lang[0][1])
-								td!= arrow
+								td
 								td: +ext(lang[1][1])
 		h2 Gameplay
 		ul
