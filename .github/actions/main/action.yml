@@ -4,5 +4,6 @@ runs:
   steps:
     - run: |
         git ls-files -z | grep -zE '\.(css|html|js|md)$' | xargs -0 touch
+git ls-files -z | grep -zE '\.(css|html|js|md)$' | grep -vzE '(test\.md)$' | xargs -0 touch
         make
       shell: bash
