@@ -13,3 +13,5 @@ main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES)
 	node page.js $@
 %.md : %.pug page.js
 	node page.js $@
+test.md : test.js
+	node test.js
