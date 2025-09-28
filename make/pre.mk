@@ -1,4 +1,4 @@
 .PHONY : perms
 pre : perms
 perms :
-	chmod -R +x $(wildcard *.sh *.pl)
+	chmod +x $(wildcard *.sh *.pl)
