@@ -16,7 +16,11 @@ mixin ext(extensions)
 			arr.join(", "),
 			last
 		].join(" & ");
-		return joined
+		if (arr.length > 0) {
+			return joined
+		} else {
+			return last
+		}
 	}
 - space = html("20")
 - arrow = html("2192")
