@@ -1,7 +1,10 @@
 function capitalize(str) {
-	return str.length > 1 ?
-			[str.charAt(0).toUpperCase(), str.slice(1).toLowerCase()].join("")
-		:	str.toUpperCase();
+	return str.length > 1
+		? [
+			str.charAt(0).toUpperCase(),
+			str.slice(1).toLowerCase()
+		].join("")
+		: str.toUpperCase()
 }
 function join(arr, joinerMain = ", ", joinerFinal = ", ") {
 	const last = arr.pop();
@@ -79,9 +82,20 @@ lang.stratic = [];
 	"Z",
 	"Z_",
 ].forEach(c => {
-	["", "A", "E", "E_", "I", "I_", "O", "O_", "U", "U_"].forEach(v => {
-		lang.stratic.push(c + v);
-	});
+	[
+		"",
+		"A",
+		"E",
+		"E_",
+		"I",
+		"I_",
+		"O",
+		"O_",
+		"U",
+		"U_"
+	].forEach(v => {
+		lang.stratic.push(c + v)
+	})
 });
 const uni = [
 	{
@@ -96,7 +110,7 @@ const uni = [
 ];
 const native = {
 	stratic: "s_ra'tik",
-	cascadic: "kaskadik",
+	cascadic: "kaskadik"
 };
 function toUnicode(str) {
 	return str
