@@ -1,10 +1,7 @@
 function capitalize(str) {
-	return str.length > 1
-		? [
-			str.charAt(0).toUpperCase(),
-			str.slice(1).toLowerCase()
-		].join("")
-		: str.toUpperCase()
+	return str.length > 1 ?
+			[str.charAt(0).toUpperCase(), str.slice(1).toLowerCase()].join("")
+		:	str.toUpperCase();
 }
 function join(arr, joinerMain = ", ", joinerFinal = ", ") {
 	const last = arr.pop();
