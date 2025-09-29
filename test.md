@@ -16,3 +16,4 @@
 8. Numerals in both scripts are `base-12` (`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10` & `11`).
 9. `Stratic` is Blocky, Horizontal & Written in stone.
 10. `Cascadic` is Curved, Vertical & Carved along the wood grain.
+11. `Cascadic` has solo, initial, medial & final letter forms.
