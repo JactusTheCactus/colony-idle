@@ -13,8 +13,11 @@ class BigNumber {
 			this.mantissa = 0;
 			this.exponent = 0;
 		} else {
-			this.exponent = Math.floor(Math.log10(Math.abs(mantissa))) + exponent;
-			this.mantissa = mantissa / Math.pow(10, Math.floor(Math.log10(Math.abs(mantissa))));
+			this.exponent =
+				Math.floor(Math.log10(Math.abs(mantissa))) + exponent;
+			this.mantissa =
+				mantissa /
+				Math.pow(10, Math.floor(Math.log10(Math.abs(mantissa))));
 		}
 		this.value = [this.mantissa, this.exponent];
 		this.normalize();
@@ -74,23 +77,34 @@ class BigNumber {
 		this.assign(this.subtract(other));
 	}
 	multiply(other) {
-		return new BigNumber(this.mantissa * other.mantissa, this.exponent + other.exponent);
+		return new BigNumber(
+			this.mantissa * other.mantissa,
+			this.exponent + other.exponent,
+		);
 	}
 	greater(other) {
 		return any([
 			this.exponent > other.exponent,
-			all([this.exponent === other.exponent, this.mantissa > other.mantissa]),
+			all([
+				this.exponent === other.exponent,
+				this.mantissa > other.mantissa,
+			]),
 		]);
 	}
 	lesser(other) {
 		return any([
 			this.exponent < other.exponent,
-			all([this.exponent === other.exponent, this.mantissa < other.mantissa]),
+			all([
+				this.exponent === other.exponent,
+				this.mantissa < other.mantissa,
+			]),
 		]);
 	}
 	toString() {
 		if (this.exponent < 3) {
-			return Math.round(this.mantissa * Math.pow(10, this.exponent)).toString();
+			return Math.round(
+				this.mantissa * Math.pow(10, this.exponent),
+			).toString();
 		}
 		return [this.mantissa.toFixed(2), this.exponent].join("e");
 	}
@@ -171,20 +185,27 @@ function runResource(resource, first) {
 		const parent = document.createElement("div");
 		parent.appendChild(upgrade);
 		main?.appendChild(parent);
-		document.getElementById(resource.name)?.addEventListener("click", function () {
-			if (resource.rate.exists()) {
-				if (resources.colonists.amount.exists()) {
-					resources.colonists.amount.decrease(new BigNumber(1));
-					resource.rate.increase(new BigNumber(1));
+		document
+			.getElementById(resource.name)
+			?.addEventListener("click", function () {
+				if (resource.rate.exists()) {
+					if (resources.colonists.amount.exists()) {
+						resources.colonists.amount.decrease(new BigNumber(1));
+						resource.rate.increase(new BigNumber(1));
+					}
+				} else {
+					resource.amount.increase(new BigNumber(1));
 				}
-			} else {
-				resource.amount.increase(new BigNumber(1));
-			}
-		});
+			});
 	}
 }
 function run(first = false) {
-	[resources.wood, resources.stone, resources.food, resources.colonists].forEach(i => {
+	[
+		resources.wood,
+		resources.stone,
+		resources.food,
+		resources.colonists,
+	].forEach(i => {
 		runResource(i, first);
 	});
 }

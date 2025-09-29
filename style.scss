@@ -1,20 +1,17 @@
 body {
-	font: 20pt Verdana;
+	font: 20pt "Segoe UI";
 	vr {
 		border-left: 1px solid gray;
 		height: 50px;
 		margin: 0 10px;
 	}
-
 	#resources {
 		display: flex;
 		justify-content: space-evenly;
-
 		* {
 			text-align: center;
 		}
 	}
-
 	#main {
 		display: flex;
 		flex-direction: column;

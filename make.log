@@ -1,1 +1,13 @@
-README.md 25ms
+chmod -R +x clean.pl
+npx sass style.scss style.css
+rm -rf style.css.map
+tsc module.d.ts \
+	--target esnext \
+	--skipLibCheck true
+node page.js test.html
+node page.js test.md
+npx prettier . --write
+./clean.pl
+style.css 98ms
+test.html 146ms
+test.md 30ms

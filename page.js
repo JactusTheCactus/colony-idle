@@ -4,7 +4,10 @@ const args = process.argv.slice(2);
 function writeFile(path, content) {
 	fs.writeFile(path, content, err => {
 		if (err) {
-			console.error("Error writing file (asynchronous with callback):", err);
+			console.error(
+				"Error writing file (asynchronous with callback):",
+				err,
+			);
 		}
 	});
 }
