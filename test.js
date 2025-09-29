@@ -147,7 +147,8 @@ Object.entries(lang).forEach(([k, v]) => {
 		"Numerals in both scripts are `base-12`",
 		`(${and(Array.from({length: 12}, (_, i) => i).map(i => `\`${i}\``))})`,
 	],
-	`\`Stratic\` is ${and("blocky horizontal written_in_stone".split(/\s+/).map(i => i.replace(/_/g, " ")))}`,
+	`\`Stratic\` is ${and("blocky horizontal written_in_stone".split(/\s+/).map(i => i.replace(/_/g, " ")))}`,,
+	`\`Cascadic\` is ${and("curved verticalal carved_along_the_wood_grain".split(/\s+/).map(i => i.replace(/_/g, " ")))}`,
 ].forEach((n, i) => {
 	if (n instanceof Array) {
 		n = n.join(" ");
