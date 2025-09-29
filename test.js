@@ -145,7 +145,7 @@ Object.entries(lang).forEach(([k, v]) => {
 	"`U__` is absent from `Stratic`, as the dialect does not have the sound, but the `Cascadic` dialect does",
 	[
 		"Numerals in both scripts are `base-12`",
-		`(${and("0 1 2 3 4 5 6 7 8 9 10 11".split(/\s+/).map(i => `\`${i}\``))})`,
+		`(${and(Array.from({ length: 12 }, (_, i) => i + 1).map(i=>`\`${i}\``))})`,
 	],
 ].forEach((n, i) => {
 	if (n instanceof Array) {
