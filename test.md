@@ -13,4 +13,4 @@
 5. `Cascadic` is an Alphabet, with each Letter (`C` / `V`) pair listed.
 6. `Stratic` consonants have no inherent value.
 7. `Ǔ` is absent from `Stratic`, as the dialect does not have the sound, but the `Cascadic` dialect does.
-8. Numerals in both scripts are `base-12` (`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10` & `11`).
+8. Numerals in both scripts are `base-12` (`1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10`, `11` & `12`).
