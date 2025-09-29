@@ -149,7 +149,7 @@ Object.entries(lang).forEach(([k, v]) => {
 	],
 	`\`Stratic\` is ${and("blocky horizontal written_in_stone".split(/\s+/).map(i => i.replace(/_/g, " ")))}`,
 	,
-	`\`Cascadic\` is ${and("curved verticalal carved_along_the_wood_grain".split(/\s+/).map(i => i.replace(/_/g, " ")))}`,
+	`\`Cascadic\` is ${and("curved vertical carved_along_the_wood_grain".split(/\s+/).map(i => capitalize(i).replace(/_/g, " ")))}`,
 ].forEach((n, i) => {
 	if (n instanceof Array) {
 		n = n.join(" ");
