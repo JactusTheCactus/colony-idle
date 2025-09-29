@@ -15,4 +15,4 @@
 7. `Ǔ` is absent from `Stratic`, as the dialect does not have the sound, but the `Cascadic` dialect does.
 8. Numerals in both scripts are `base-12` (`0`, `1`, `2`, `3`, `4`, `5`, `6`, `7`, `8`, `9`, `10` & `11`).
 9. `Stratic` is blocky, horizontal & written in stone.
-10. `Cascadic` is curved, verticalal & carved along the wood grain.
+10. `Cascadic` is Curved, Vertical & Carved along the wood grain.
