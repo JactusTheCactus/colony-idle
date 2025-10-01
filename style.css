@@ -1,10 +1,16 @@
 body {
-	font: 20pt "Segoe UI";
+	font:
+		20px "Segoe UI",
+		"Noto Sans Mono";
 }
 body vr {
+	/*custom vertical "<hr>"*/
 	border-left: 1px solid gray;
 	height: 50px;
 	margin: 0 10px;
+}
+body code {
+	font-family: "Noto Sans Mono";
 }
 body #resources {
 	display: flex;

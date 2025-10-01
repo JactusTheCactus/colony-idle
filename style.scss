@@ -1,9 +1,23 @@
+@use "sass:map";
+$fonts: (
+	regular: "Segoe UI",
+	mono: "Noto Sans Mono",
+);
+@function font($key) {
+	@return map.get($fonts, $key);
+}
 body {
-	font: 20pt "Segoe UI";
+	font:
+		20px font(regular),
+		font(mono);
 	vr {
+		/*custom vertical "<hr>"*/
 		border-left: 1px solid gray;
 		height: 50px;
 		margin: 0 10px;
+	}
+	code {
+		font-family: font(mono);
 	}
 	#resources {
 		display: flex;

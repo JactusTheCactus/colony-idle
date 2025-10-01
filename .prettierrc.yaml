@@ -9,3 +9,9 @@ bracketSameLine: false
 arrowParens: avoid
 embeddedLanguageFormatting: auto
 singleAttributePerLine: true
+overrides:
+  - files:
+      - README.md
+      - test.md
+    options:
+      parser: html
