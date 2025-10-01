@@ -6,7 +6,7 @@ main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES) test.md
 	npx sass $< $@
 	rm -rf $@.map
 %.js : %.ts
-	tsc $< \
+	npx tsc $< \
 		--target esnext \
 		--skipLibCheck true
 %.html : %.pug page.js
