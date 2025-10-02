@@ -1,7 +1,2 @@
 node_modules
 /**/test.*
-!test.pug
-!test.md
-!test.html
-!test.scss
-!test.css

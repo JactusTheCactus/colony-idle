@@ -1,0 +1,18 @@
+$mono: "Noto Sans Mono";
+$serif: "Noto Serif";
+$sans: "Noto Sans";
+body {
+	font: 20px $sans;
+	.mono {
+		font-family: $mono;
+	}
+	.serif {
+		font-family: $serif;
+	}
+	.sans {
+		font-family: $sans;
+	}
+	.table-wrapper {
+		overflow-x: auto;
+	}
+}

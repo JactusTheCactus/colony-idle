@@ -1,0 +1,17 @@
+body {
+	font: 20px "Noto Sans";
+}
+body .mono {
+	font-family: "Noto Sans Mono";
+}
+body .serif {
+	font-family: "Noto Serif";
+}
+body .sans {
+	font-family: "Noto Sans";
+}
+body .table-wrapper {
+	overflow-x: auto;
+}
+
+/*# sourceMappingURL=neo.css.map */

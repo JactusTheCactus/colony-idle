@@ -1,0 +1,414 @@
+-
+	function capitalize(str) {
+		return str.length > 1
+			? [
+				str.charAt(0).toUpperCase(),
+				str.slice(1).toLowerCase()
+			]
+				.join("")
+			: str.toUpperCase()
+	}
+-
+	function upper(str) {
+		return str.toUpperCase()
+	}
+-
+	function lower(str) {
+		return str.toLowerCase()
+	}
+-
+	uni = [
+		{
+			_: "\u0301",
+			d: "\u00F0",
+			n: "\u014B",
+			t: "\u00FE",
+		},
+		{
+			_: "\u030C",
+		}
+	]
+-
+	pos = {
+		solo: "\u{0325}",
+		init: "\u{032D}",
+		medi: "",
+		fina: "\u{032C}",
+	}
+-
+	function fmt(str) {
+		return str
+			.replace(
+				/(\w)(_{1,2})/g,
+				(match, letter, variant) => {
+					let out = uni[variant.length - 1][letter.toLowerCase()]
+						|| [
+							letter,
+							uni[variant.length - 1]["_"]
+						]
+							.join("");
+					if (/\p{Lu}/u.test(letter)) {
+						return out.toUpperCase()
+					} else {
+						return out.toLowerCase()
+					}
+				}
+			).normalize("NFC")
+			.replace(
+				/(\p{L})'/gu,
+				(match, letter) => {
+					return [
+						letter,
+						"\u{0328}"
+					].join("")
+				}
+			).normalize("NFC")
+			.replace(
+				/(\p{L})([\^\$\*@])/gu,
+				(match, letter, position) => {
+					switch(position) {
+						case "@":
+							return letter + pos.solo;
+						case "^":
+							return letter + pos.init;
+						case "*":
+							return letter + pos.medi;
+						case "$":
+							return letter + pos.fina;
+						default:
+							return letter + position
+					}
+				}
+			).normalize("NFC");
+	}
+-
+	neo = [
+		[
+			"Cascadic",
+			"Kaskadik",
+			[
+				"A",
+				"B",
+				"C",
+				"D",
+				"D_",
+				"E",
+				"E_",
+				"F",
+				"G",
+				"H",
+				"I",
+				"I_",
+				"J",
+				"K",
+				"L",
+				"M",
+				"N",
+				"N_",
+				"O",
+				"O_",
+				"P",
+				"R",
+				"S",
+				"S_",
+				"T",
+				"T_",
+				"U",
+				"U_",
+				"U__",
+				"V",
+				"W",
+				"Y",
+				"Z",
+				"Z_"
+			]
+		],
+		[
+			"Stratic",
+			"S_ra'tik",
+			[]
+		]
+	]
+-
+	[
+		"B",
+		"C",
+		"D",
+		"D_",
+		"F",
+		"G",
+		"H",
+		"J",
+		"K",
+		"L",
+		"M",
+		"N",
+		"N_",
+		"P",
+		"R",
+		"S",
+		"S_",
+		"T",
+		"T_",
+		"V",
+		"W",
+		"X",
+		"Y",
+		"Z",
+		"Z_"
+	].forEach(c => {
+		[
+			"",
+			"A",
+			"E",
+			"E_",
+			"I",
+			"I_",
+			"O",
+			"O_",
+			"U",
+			"U_"
+		].forEach(v => {
+			neo[1][2].push(
+				capitalize(c+v)
+			)
+		})
+	})
+- space = " "
+-
+	neo = [
+		"S_ra'tik",
+		"Kaskadik"
+	]
+- str = fmt("S_ra'tik")
+- cas = fmt("K^a*s*k*a*d*i*k$")
+-
+	phonemes = {
+		a:"a",
+		b:"b",
+		c:"ch",
+		d:"d",
+		d_:"dh",
+		e:"e",
+		e_:"ei",
+		f:"f",
+		g:"g",
+		h:"h",
+		i:"i",
+		i_:"ie",
+		j:"j",
+		k:"k",
+		l:"l",
+		m:"m",
+		n:"n",
+		n_:"ng",
+		o:"o",
+		o_:"ow",
+		p:"p",
+		r:"r",
+		s:"s",
+		s_:"sh",
+		t:"t",
+		t_:"th",
+		u:"u",
+		u_:"oo",
+		u__:"ue",
+		v:"v",
+		w:"w",
+		x:"[null]",
+		y:"y",
+		z:"z",
+		z_:"zh"
+	}
+mixin abbr(name,tip)
+	abbr(title=tip) #{name}
+doctype html
+html
+	head
+		title=neo.map(fmt).join(" & ")
+		link(
+			rel="stylesheet"
+			href="neo.css"
+		)
+	body
+		section#stratic.mono
+			h1: +abbr(str,"Stratic")
+			.table-wrapper: table
+				-
+					vowels = [
+						"",
+						"A",
+						"E",
+						"E_",
+						"I",
+						"I_",
+						"O",
+						"O_",
+						"U",
+						"U_"
+					]
+				-
+					consonants = [
+						"",
+						"B",
+						"C",
+						"D",
+						"D_",
+						"F",
+						"G",
+						"H",
+						"J",
+						"K",
+						"L",
+						"M",
+						"N",
+						"N_",
+						"P",
+						"R",
+						"S",
+						"S_",
+						"T",
+						"T_",
+						"V",
+						"W",
+						"X",
+						"Y",
+						"Z",
+						"Z_"
+					]
+				for v in vowels
+					tr
+						for c in consonants
+							-
+								pair = fmt([
+									upper(c || v) || upper("C"),
+									lower(v || c) || upper("V")
+								].join(""))
+							if !v && !c
+								th= pair
+							else if !v && c
+								th: abbr(title=capitalize((phonemes[c.toLowerCase()]).replace(phonemes.x,(phonemes.x.toUpperCase()))))= pair
+							else if v && !c
+								th: abbr(title=capitalize(phonemes[v.toLowerCase()]))= pair
+							else
+								td: abbr(title=capitalize([phonemes[c.toLowerCase()],phonemes[v.toLowerCase()]].join("").replace(phonemes.x,"")))= fmt(pair+"'")
+		section#cascadic.serif
+			h1: +abbr(cas,"Cascadic")
+			-
+				consonants = [
+					"B",
+					"C",
+					"D",
+					"D_",
+					"F",
+					"G",
+					"H",
+					"J",
+					"K",
+					"L",
+					"M",
+					"N",
+					"N_",
+					"P",
+					"R",
+					"S",
+					"S_",
+					"T",
+					"T_",
+					"V",
+					"W",
+					"Y",
+					"Z",
+					"Z_"
+				]
+			-
+				vowels = [
+					"A",
+					"E",
+					"E_",
+					"I",
+					"I_",
+					"O",
+					"O_",
+					"U",
+					"U_",
+					"U__"
+				]
+			-
+				set = [
+					["Consonants", consonants],
+					["Vowels", vowels]
+				]
+			for i in set
+				h2= i[0]
+				table
+					tr
+						for p in Object.keys(pos)
+							th= p
+					for c in i[1]
+						- letters = ["@","^","*","$"].map(i => capitalize(fmt(c+i).repeat(2)))
+						tr
+							for l in letters
+								td: abbr(title=capitalize(phonemes[c.toLowerCase()]))= l
+		section#notes.sans
+			h1 Notes
+			ol
+				li
+					| For both scripts, diacritics#{space}
+					em
+						| (other than the#{space}
+						q Below
+						| #{space}diacritics)
+					| #{space}create separate letters, not variants
+				li
+					| in#{space}
+					+abbr(str,"Stratic")
+					| , the#{space}
+					q Ogonek
+					| #{space}marks emphasis, though it is absent from#{space}
+					+abbr(cas,"Cascadic")
+				li
+					q: abbr(title="Th") #{fmt("T_")}
+					| #{space}&#{space}
+					q: abbr(title="Dh") #{fmt("D_")}
+					| #{space}are separate phonemes, differing in voicing (
+					code /#{"\u03B8"}/
+					| #{space}&#{space}
+					code /#{fmt("d_")}/
+					| )
+				li
+					q #{"\u{25CC}\u{0328}"}
+					| #{space}is the Emphasis mark, though is absent from#{space}
+					+abbr(cas,"Cascadic")
+				li
+					+abbr(str,"Stratic")
+					| #{space}is an Abugida (
+					em X
+					| #{space}is the#{space}
+					q Null Consonant,
+					| #{space}hence why it's absent from#{space}
+					+abbr(cas,"Cascadic")
+					| )
+				li
+					+abbr(cas,"Cascadic")
+					| #{space}is an Alphabet
+				li
+					+abbr(str,"Stratic")
+					| #{space}consonants have no inherent vowel
+				li
+					q: abbr(title="Ue")= fmt("U__@")
+					| #{space}is absent from#{space}
+					+abbr(str,"Stratic")
+					| , as the dialect does not have the sound, but the#{space}
+					+abbr(cas,"Cascadic")
+					| #{space}dialect does
+				li Numerals in both scripts are base-12 (0-11)
+				li
+					+abbr(str,"Stratic")
+					| #{space}is blocky, horizontal & carved in stone
+				li
+					+abbr(cas,"Cascadic")
+					| #{space}is  curved, vertical & etched along the wood grain
+				li
+					+abbr(cas,"Cascadic")
+					| #{space}has solo, initial, medial & final letter forms

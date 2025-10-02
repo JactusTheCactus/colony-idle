@@ -19,6 +19,7 @@
 	},
 	"homepage": "https://github.com/JactusTheCactus/colony-idle#readme",
 	"dependencies": {
+		"html-minifier": "^4.0.0",
 		"prettier": "^3.6.2",
 		"pug": "^3.0.3",
 		"sass": "^1.93.1",
