@@ -7,17 +7,15 @@ $fonts: (
 	@return map.get($fonts, $key);
 }
 body {
-	font:
-		20px font(regular),
-		font(mono);
+	font: 20px font(regular);
 	vr {
-		/*custom vertical "<hr>"*/
 		border-left: 1px solid gray;
 		height: 50px;
 		margin: 0 10px;
 	}
-	code {
-		font-family: font(mono);
+	code,
+	button {
+		font: 1em font(mono);
 	}
 	#resources {
 		display: flex;

@@ -46,6 +46,14 @@
 						return out.toLowerCase()
 					}
 			})
+			.replace(
+				/(\p{Script=Latin})'/gu,
+				(match, letter) => {
+					return [
+						letter,
+						"\u{0328}"
+					].join("")
+				})
 			.normalize("NFC");
 	}
 -
@@ -142,12 +150,21 @@
 		})
 	})
 - space = " "
+-
+	neo = [
+		"S_ra'tik",
+		"Kaskadik"
+	]
+- str = fmt("S_ra'tik")
+- cas = fmt("Kaskadik")
 doctype html
 html
 	head
-		title #{fmt("S_ra'tik")} & #{fmt("Kaskadik")}
-		style
-			|body{font:20pt"Segoe UI"}
+		title=neo.map(fmt).join(" & ")
+		link(
+			rel="stylesheet"
+			href="test.css"
+		)
 	body
 		h1 Stratic #{fmt("[S_ra'tik]")}
 		table
@@ -204,7 +221,7 @@ html
 						if !v || !c
 							th= pair
 						else
-							td= pair
+							td= fmt(pair+"'")
 		h1 Cascadic #{fmt("[Kaskadik]")}
 		-
 			consonants = [
@@ -258,21 +275,28 @@ html
 					li= capitalize(fmt(c.repeat(2)))
 		h1 Notes
 		ol
-			li For both scripts, diacritics create separate letters, not variants (since latin alphabet variants just add diacritics onto characters to make new ones, unlike cyrillic variants, which, generally, make entirely new symbols)
+			li
+				| For both scripts, diacritics#{space}
+				em (other than Ogonek)
+				| #{space}create separate letters, not variants
+			li
+				| in #{str}, the#{space}
+				em Ogonek
+				| #{space}marks emphasis, though it is absent from #{cas}
 			li #{fmt("T_")} & #{fmt("D_")} are separate phonemes, differing in voicing (/#{"\u03B8"}/ & /#{fmt("d_")}/)
 			li
 				em '
-				| #{space}is the Emphasis mark, and follows the emphasized syllable, though is absent from Cascadic
+				| #{space}is the Emphasis mark, and follows the emphasized syllable, though is absent from #{cas}
 			li
-				| Stratic is an Abugida (
+				| #{str} is an Abugida (
 				em X
 				| #{space}is the#{space}
 				q Null Consonant,
-				| #{space}hence why it's absent from Cascadic)
-			li Cascadic is an Alphabet
-			li Stratic consonants have no inherent value
-			li #{fmt("U__")} is absent from Stratic, as the dialect does not have the sound, but the Cascadic dialect does
+				| #{space}hence why it's absent from #{cas})
+			li #{cas} is an Alphabet
+			li #{str} consonants have no inherent value
+			li #{fmt("U__")} is absent from #{str}, as the dialect does not have the sound, but the #{cas} dialect does
 			li Numerals in both scripts are base-12 (0-11)
-			li Stratic is blocky, horizontal & carved in stone
-			li Cascadic is  curved, vertical & etched along the wood grain
-			li Cascadic has solo, initial, medial & final letter forms
+			li #{str} is blocky, horizontal & carved in stone
+			li #{cas} is  curved, vertical & etched along the wood grain
+			li #{cas} has solo, initial, medial & final letter forms

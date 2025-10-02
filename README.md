@@ -9,8 +9,9 @@
 	</head>
 	<body>
 		<h1>Colony Idle</h1>
-		<code>#Colony</code>, <code>#Deity</code>, <code>#Fantasy</code>,
-		<code>#Idle</code>, <code>#Incremental</code>, <code>#Management</code>,
+		<code>#Colony</code>, <code>#Deity</code>,
+		<code>#Fantasy</code>, <code>#Idle</code>,
+		<code>#Incremental</code>, <code>#Management</code>,
 		<code>#Simulator</code>
 		<h2>Software</h2>
 		<dl>
@@ -65,7 +66,10 @@
 							<li>
 								Prestige Resource
 								<ul>
-									<li>Spent on permanent upgrades</li>
+									<li>
+										Spent on permanent
+										upgrades
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -147,27 +151,37 @@
 							<li>
 								Managing the colony
 								<ul>
-									<li>Assigning resources</li>
-									<li>Employing colonists</li>
+									<li>
+										Assigning resources
+									</li>
+									<li>
+										Employing colonists
+									</li>
 								</ul>
 							</li>
 							<li>
-								Same colonist throughout the lifetime of a
-								single colony
+								Same colonist throughout the
+								lifetime of a single colony
 								<ul>
 									<li>
-										Like other colonists, dies during the
+										Like other
+										colonists, dies
+										during the
 										apocalypse
 										<ul>
 											<li>
-												A new avatar is chosen at the
-												start of a new colony
+												A new avatar
+												is chosen at
+												the start of
+												a new colony
 											</li>
 										</ul>
 									</li>
 									<li>
-										Personal health directly linked to the
-										health of the colony
+										Personal health
+										directly linked to
+										the health of the
+										colony
 									</li>
 								</ul>
 							</li>
@@ -180,24 +194,40 @@
 								Apocalypse prestige
 								<ul>
 									<li>
-										Each domain has a specific apocalypse
+										Each domain has a
+										specific apocalypse
 										<ul>
 											<li>
-												Each apocalypse is functionally
+												Each
+												apocalypse
+												is
+												functionally
 												identical
 												<ul>
 													<li>
-														Choosing one apocalypse
-														over another changes
-														nothing about the next
+														Choosing
+														one
+														apocalypse
+														over
+														another
+														changes
+														nothing
+														about
+														the
+														next
 														run
 													</li>
 												</ul>
 											</li>
 											<li>
-												Visually distinct
+												Visually
+												distinct
 												<ul>
-													<li>Just visual flavour</li>
+													<li>
+														Just
+														visual
+														flavour
+													</li>
 												</ul>
 											</li>
 										</ul>
@@ -206,18 +236,24 @@
 										End the world
 										<ul>
 											<li>
-												Start again with more power
+												Start again
+												with more
+												power
 												<ul>
 													<li>
 														Achievements
 														<ul>
 															<li>
-																Give permanent
+																Give
+																permanent
 																bonuses
 															</li>
 															<li>
-																Leave behind
-																"relics" of past
+																Leave
+																behind
+																"relics"
+																of
+																past
 																colonies
 															</li>
 														</ul>
@@ -226,11 +262,13 @@
 														Unlocks
 														<ul>
 															<li>
-																Better domain
+																Better
+																domain
 																tiers
 																<dl>
 																	<dt>
-																		Tier 1
+																		Tier
+																		1
 																	</dt>
 																	<ol>
 																		<dd>
@@ -255,7 +293,8 @@
 																		</dd>
 																	</ol>
 																	<dt>
-																		Tier 2
+																		Tier
+																		2
 																	</dt>
 																	<ol>
 																		<dd>
@@ -265,7 +304,8 @@
 																		</dd>
 																	</ol>
 																	<dt>
-																		Tier 3
+																		Tier
+																		3
 																	</dt>
 																	<ol>
 																		<dd>
@@ -289,7 +329,8 @@
 																		colonists
 																		with
 																		special
-																		skills /
+																		skills
+																		/
 																		bonuses
 																	</li>
 																</ul>
@@ -305,8 +346,14 @@
 							<li>
 								Different domains
 								<ul>
-									<li>Domain-specific buffs & debuffs</li>
-									<li>One domain per colony</li>
+									<li>
+										Domain-specific
+										buffs & debuffs
+									</li>
+									<li>
+										One domain per
+										colony
+									</li>
 								</ul>
 							</li>
 						</ul>
@@ -321,7 +368,10 @@
 						<li>
 							Birth colonists
 							<ul>
-								<li>Limited by housing capacity</li>
+								<li>
+									Limited by housing
+									capacity
+								</li>
 							</ul>
 						</li>
 					</dd>

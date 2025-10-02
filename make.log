@@ -2,6 +2,9 @@ chmod -R +x clean.pl
 npx tsc module.d.ts \
 	--target esnext \
 	--skipLibCheck true
+node page.js test.html
+node page.js test.md
 npx prettier . --write
 ./clean.pl
-test.md 55ms
+test.html 47ms
+test.md 31ms

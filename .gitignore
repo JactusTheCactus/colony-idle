@@ -3,3 +3,5 @@ node_modules
 !test.pug
 !test.md
 !test.html
+!test.scss
+!test.css
