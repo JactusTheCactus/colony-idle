@@ -1,6 +1,6 @@
-$mono: "Noto Sans Mono";
-$serif: "Noto Serif";
-$sans: "Noto Sans";
+$mono: "Noto Sans Mono",monospace;
+$serif: "Noto Serif",serif;
+$sans: "Noto Sans",sans-serif;
 body {
 	font: 20px $sans;
 	.mono {
