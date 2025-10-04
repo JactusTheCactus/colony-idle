@@ -2,8 +2,8 @@ name: Commit
 runs:
   using: composite
   steps:
-    - run: |
+    - shell: bash
+      run: |
         git add .
         git commit -m "Commit Make changes" || :
         git push origin main
-      shell: bash
