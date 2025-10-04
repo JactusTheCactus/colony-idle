@@ -5,5 +5,6 @@ runs:
     - run: |
         git ls-files -z '*.css' '*.html' '*.js' '*.md' | xargs -0 touch
         git ls-files '*.css' '*.html' '*.js' '*.md'
-        make
+        make > make.log
+        cat make.log
       shell: bash
