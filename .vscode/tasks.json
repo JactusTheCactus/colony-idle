@@ -12,19 +12,11 @@
 	},
 	"tasks": [
 		{
-			"label": "Make",
-			"command": "make > make.log",
+			"label": "Build",
+			"command": "make.sh",
 			"group": {
 				"kind": "build",
 				"isDefault": true
-			}
-		},
-		{
-			"label": "Test",
-			"command": "make test.md > test.md",
-			"group": {
-				"kind": "build",
-				"isDefault": false
 			}
 		}
 	]
