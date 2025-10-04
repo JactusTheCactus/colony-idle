@@ -1,7 +1,8 @@
-PAGES = $(wildcard *.html *.md)
+PAGES := $(wildcard *.html *.md)
 SCSS := $(wildcard *.scss)
 TS := $(wildcard *.ts)
 main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES)
+	echo $(PAGES)
 %.css : %.scss
 	npx sass $< $@
 	rm -rf $@.map
