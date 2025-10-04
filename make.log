@@ -2,8 +2,6 @@ chmod -R +x clean.pl make.sh mini.sh
 npx tsc module.d.ts \
 	--target esnext \
 	--skipLibCheck true
-echo index.html neo.html neo.min.html README.md neo.md neo.min.md
-index.html neo.html neo.min.html README.md neo.md neo.min.md
 npx prettier . --write
 ./clean.pl
 ./mini.sh
