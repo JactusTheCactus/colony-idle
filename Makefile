@@ -1,4 +1,4 @@
-.PHONY : all main post
+.PHONY : all pre main post
 #.SILENT :
 .ONESHELL :
 all : pre main post
