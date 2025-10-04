@@ -1,7 +1,7 @@
 PAGES := $(wildcard *.html *.md)
 SCSS := $(wildcard *.scss)
 TS := $(wildcard *.ts)
-main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES) neo.md
+main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES) neo.md neo.min.md
 %.css : %.scss
 	npx sass $< $@
 	rm -rf $@.map
