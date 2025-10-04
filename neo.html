@@ -352,7 +352,7 @@
 			class="serif"
 			id="cascadic"
 		>
-			<h1><abbr title="Cascadic">K̭askadik̬</abbr></h1>
+			<h1><abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr></h1>
 			<h2>Consonants</h2>
 			<table>
 				<tr>
@@ -364,145 +364,145 @@
 				<tr>
 					<td><abbr title="B">B̥b̥</abbr></td>
 					<td><abbr title="B">B̭b̭</abbr></td>
-					<td><abbr title="B">Bb</abbr></td>
+					<td><abbr title="B">B̯b̯</abbr></td>
 					<td><abbr title="B">B̬b̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Ch">C̥c̥</abbr></td>
 					<td><abbr title="Ch">C̭c̭</abbr></td>
-					<td><abbr title="Ch">Cc</abbr></td>
+					<td><abbr title="Ch">C̯c̯</abbr></td>
 					<td><abbr title="Ch">C̬c̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="D">D̥d̥</abbr></td>
 					<td><abbr title="D">Ḓḓ</abbr></td>
-					<td><abbr title="D">Dd</abbr></td>
+					<td><abbr title="D">D̯d̯</abbr></td>
 					<td><abbr title="D">D̬d̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Dh">Ð̥ð̥</abbr></td>
 					<td><abbr title="Dh">Ð̭ð̭</abbr></td>
-					<td><abbr title="Dh">Ðð</abbr></td>
+					<td><abbr title="Dh">Ð̯ð̯</abbr></td>
 					<td><abbr title="Dh">Ð̬ð̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="F">F̥f̥</abbr></td>
 					<td><abbr title="F">F̭f̭</abbr></td>
-					<td><abbr title="F">Ff</abbr></td>
+					<td><abbr title="F">F̯f̯</abbr></td>
 					<td><abbr title="F">F̬f̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="G">G̥g̥</abbr></td>
 					<td><abbr title="G">G̭g̭</abbr></td>
-					<td><abbr title="G">Gg</abbr></td>
+					<td><abbr title="G">G̯g̯</abbr></td>
 					<td><abbr title="G">G̬g̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="H">H̥h̥</abbr></td>
 					<td><abbr title="H">H̭h̭</abbr></td>
-					<td><abbr title="H">Hh</abbr></td>
+					<td><abbr title="H">H̯h̯</abbr></td>
 					<td><abbr title="H">H̬h̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="J">J̥j̥</abbr></td>
 					<td><abbr title="J">J̭j̭</abbr></td>
-					<td><abbr title="J">Jj</abbr></td>
+					<td><abbr title="J">J̯j̯</abbr></td>
 					<td><abbr title="J">J̬j̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="K">K̥k̥</abbr></td>
 					<td><abbr title="K">K̭k̭</abbr></td>
-					<td><abbr title="K">Kk</abbr></td>
+					<td><abbr title="K">K̯k̯</abbr></td>
 					<td><abbr title="K">K̬k̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="L">L̥l̥</abbr></td>
 					<td><abbr title="L">Ḽḽ</abbr></td>
-					<td><abbr title="L">Ll</abbr></td>
+					<td><abbr title="L">L̯l̯</abbr></td>
 					<td><abbr title="L">L̬l̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="M">M̥m̥</abbr></td>
 					<td><abbr title="M">M̭m̭</abbr></td>
-					<td><abbr title="M">Mm</abbr></td>
+					<td><abbr title="M">M̯m̯</abbr></td>
 					<td><abbr title="M">M̬m̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="N">N̥n̥</abbr></td>
 					<td><abbr title="N">Ṋṋ</abbr></td>
-					<td><abbr title="N">Nn</abbr></td>
+					<td><abbr title="N">N̯n̯</abbr></td>
 					<td><abbr title="N">N̬n̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Ng">Ŋ̥ŋ̥</abbr></td>
 					<td><abbr title="Ng">Ŋ̭ŋ̭</abbr></td>
-					<td><abbr title="Ng">Ŋŋ</abbr></td>
+					<td><abbr title="Ng">Ŋ̯ŋ̯</abbr></td>
 					<td><abbr title="Ng">Ŋ̬ŋ̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="P">P̥p̥</abbr></td>
 					<td><abbr title="P">P̭p̭</abbr></td>
-					<td><abbr title="P">Pp</abbr></td>
+					<td><abbr title="P">P̯p̯</abbr></td>
 					<td><abbr title="P">P̬p̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="R">R̥r̥</abbr></td>
 					<td><abbr title="R">R̭r̭</abbr></td>
-					<td><abbr title="R">Rr</abbr></td>
+					<td><abbr title="R">R̯r̯</abbr></td>
 					<td><abbr title="R">R̬r̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="S">S̥s̥</abbr></td>
 					<td><abbr title="S">S̭s̭</abbr></td>
-					<td><abbr title="S">Ss</abbr></td>
+					<td><abbr title="S">S̯s̯</abbr></td>
 					<td><abbr title="S">S̬s̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Sh">Ś̥ś̥</abbr></td>
 					<td><abbr title="Sh">Ś̭ś̭</abbr></td>
-					<td><abbr title="Sh">Śś</abbr></td>
+					<td><abbr title="Sh">Ś̯ś̯</abbr></td>
 					<td><abbr title="Sh">Ś̬ś̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="T">T̥t̥</abbr></td>
 					<td><abbr title="T">Ṱṱ</abbr></td>
-					<td><abbr title="T">Tt</abbr></td>
+					<td><abbr title="T">T̯t̯</abbr></td>
 					<td><abbr title="T">T̬t̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Th">Þ̥þ̥</abbr></td>
 					<td><abbr title="Th">Þ̭þ̭</abbr></td>
-					<td><abbr title="Th">Þþ</abbr></td>
+					<td><abbr title="Th">Þ̯þ̯</abbr></td>
 					<td><abbr title="Th">Þ̬þ̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="V">V̥v̥</abbr></td>
 					<td><abbr title="V">V̭v̭</abbr></td>
-					<td><abbr title="V">Vv</abbr></td>
+					<td><abbr title="V">V̯v̯</abbr></td>
 					<td><abbr title="V">V̬v̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="W">W̥w̥</abbr></td>
 					<td><abbr title="W">W̭w̭</abbr></td>
-					<td><abbr title="W">Ww</abbr></td>
+					<td><abbr title="W">W̯w̯</abbr></td>
 					<td><abbr title="W">W̬w̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Y">Y̥y̥</abbr></td>
 					<td><abbr title="Y">Y̭y̭</abbr></td>
-					<td><abbr title="Y">Yy</abbr></td>
+					<td><abbr title="Y">Y̯y̯</abbr></td>
 					<td><abbr title="Y">Y̬y̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Z">Z̥z̥</abbr></td>
 					<td><abbr title="Z">Z̭z̭</abbr></td>
-					<td><abbr title="Z">Zz</abbr></td>
+					<td><abbr title="Z">Z̯z̯</abbr></td>
 					<td><abbr title="Z">Z̬z̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Zh">Ź̥ź̥</abbr></td>
 					<td><abbr title="Zh">Ź̭ź̭</abbr></td>
-					<td><abbr title="Zh">Źź</abbr></td>
+					<td><abbr title="Zh">Ź̯ź̯</abbr></td>
 					<td><abbr title="Zh">Ź̬ź̬</abbr></td>
 				</tr>
 			</table>
@@ -517,61 +517,61 @@
 				<tr>
 					<td><abbr title="A">Ḁḁ</abbr></td>
 					<td><abbr title="A">A̭a̭</abbr></td>
-					<td><abbr title="A">Aa</abbr></td>
+					<td><abbr title="A">A̯a̯</abbr></td>
 					<td><abbr title="A">A̬a̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="E">E̥e̥</abbr></td>
 					<td><abbr title="E">Ḙḙ</abbr></td>
-					<td><abbr title="E">Ee</abbr></td>
+					<td><abbr title="E">E̯e̯</abbr></td>
 					<td><abbr title="E">E̬e̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Ei">É̥é̥</abbr></td>
 					<td><abbr title="Ei">Ḙ́ḙ́</abbr></td>
-					<td><abbr title="Ei">Éé</abbr></td>
+					<td><abbr title="Ei">É̯é̯</abbr></td>
 					<td><abbr title="Ei">É̬é̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="I">I̥i̥</abbr></td>
 					<td><abbr title="I">I̭i̭</abbr></td>
-					<td><abbr title="I">Ii</abbr></td>
+					<td><abbr title="I">I̯i̯</abbr></td>
 					<td><abbr title="I">I̬i̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Ie">Í̥í̥</abbr></td>
 					<td><abbr title="Ie">Í̭í̭</abbr></td>
-					<td><abbr title="Ie">Íí</abbr></td>
+					<td><abbr title="Ie">Í̯í̯</abbr></td>
 					<td><abbr title="Ie">Í̬í̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="O">O̥o̥</abbr></td>
 					<td><abbr title="O">O̭o̭</abbr></td>
-					<td><abbr title="O">Oo</abbr></td>
+					<td><abbr title="O">O̯o̯</abbr></td>
 					<td><abbr title="O">O̬o̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Ow">Ó̥ó̥</abbr></td>
 					<td><abbr title="Ow">Ó̭ó̭</abbr></td>
-					<td><abbr title="Ow">Óó</abbr></td>
+					<td><abbr title="Ow">Ó̯ó̯</abbr></td>
 					<td><abbr title="Ow">Ó̬ó̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="U">U̥u̥</abbr></td>
 					<td><abbr title="U">Ṷṷ</abbr></td>
-					<td><abbr title="U">Uu</abbr></td>
+					<td><abbr title="U">U̯u̯</abbr></td>
 					<td><abbr title="U">U̬u̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Oo">Ú̥ú̥</abbr></td>
 					<td><abbr title="Oo">Ṷ́ṷ́</abbr></td>
-					<td><abbr title="Oo">Úú</abbr></td>
+					<td><abbr title="Oo">Ú̯ú̯</abbr></td>
 					<td><abbr title="Oo">Ú̬ú̬</abbr></td>
 				</tr>
 				<tr>
 					<td><abbr title="Ue">Ǔ̥ǔ̥</abbr></td>
 					<td><abbr title="Ue">Ṷ̌ṷ̌</abbr></td>
-					<td><abbr title="Ue">Ǔǔ</abbr></td>
+					<td><abbr title="Ue">Ǔ̯ǔ̯</abbr></td>
 					<td><abbr title="Ue">Ǔ̬ǔ̬</abbr></td>
 				</tr>
 			</table>
@@ -594,7 +594,7 @@
 					in <abbr title="Stratic">Śrątik</abbr>,
 					the <q>Ogonek</q> marks emphasis, though
 					it is absent from
-					<abbr title="Cascadic">K̭askadik̬</abbr>
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>
 				</li>
 				<li>
 					<q><abbr title="Th">Þ</abbr></q> &
@@ -605,17 +605,17 @@
 				<li>
 					<q>◌̨</q> is the Emphasis mark, though is
 					absent from
-					<abbr title="Cascadic">K̭askadik̬</abbr>
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>
 				</li>
 				<li>
 					<abbr title="Stratic">Śrątik</abbr> is
 					an Abugida (<em>X</em> is the
 					<q>Null Consonant,</q> hence why it's
 					absent from
-					<abbr title="Cascadic">K̭askadik̬</abbr>)
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>)
 				</li>
 				<li>
-					<abbr title="Cascadic">K̭askadik̬</abbr>
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>
 					is an Alphabet
 				</li>
 				<li>
@@ -628,7 +628,7 @@
 					<abbr title="Stratic">Śrątik</abbr>, as
 					the dialect does not have the sound, but
 					the
-					<abbr title="Cascadic">K̭askadik̬</abbr>
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>
 					dialect does
 				</li>
 				<li>
@@ -640,12 +640,12 @@
 					blocky, horizontal & carved in stone
 				</li>
 				<li>
-					<abbr title="Cascadic">K̭askadik̬</abbr>
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>
 					is curved, vertical & etched along the
 					wood grain
 				</li>
 				<li>
-					<abbr title="Cascadic">K̭askadik̬</abbr>
+					<abbr title="Cascadic">K̭a̯s̯k̯a̯d̯i̯k̬</abbr>
 					has solo, initial, medial & final letter
 					forms
 				</li>

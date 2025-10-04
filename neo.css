@@ -1,14 +1,16 @@
 body {
-	font: 20px "Noto Sans";
+	font:
+		20px "Noto Sans",
+		sans-serif;
 }
 body .mono {
-	font-family: "Noto Sans Mono";
+	font-family: "Noto Sans Mono", monospace;
 }
 body .serif {
-	font-family: "Noto Serif";
+	font-family: "Noto Serif", serif;
 }
 body .sans {
-	font-family: "Noto Sans";
+	font-family: "Noto Sans", sans-serif;
 }
 body .table-wrapper {
 	overflow-x: auto;
