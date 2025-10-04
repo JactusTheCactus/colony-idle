@@ -5,3 +5,4 @@ npx tsc module.d.ts \
 npx prettier . --write
 ./clean.pl
 ./mini.sh
+.github/actions/main/action.yml 10ms
