@@ -9,9 +9,9 @@ main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES)
 	npx tsc $< \
 		--target esnext \
 		--skipLibCheck true
-%.html : %.pug page.ts
+%.html : %.pug
 	echo $@
 	node page.js $@
-%.md : %.pug page.ts
+%.md : %.pug
 	echo $@
 	node page.js $@
