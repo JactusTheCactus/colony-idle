@@ -10,6 +10,8 @@ main : $(SCSS:.scss=.css) $(TS:.ts=.js) $(PAGES)
 		--target esnext \
 		--skipLibCheck true
 %.html : %.pug page.js
+	echo $@
 	node page.js $@
 %.md : %.pug page.js
+	echo $@
 	node page.js $@
