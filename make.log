@@ -1,4 +1,4 @@
-chmod -R +x clean.pl mini.sh
+chmod -R +x clean.pl make.sh mini.sh
 npx tsc module.d.ts \
 	--target esnext \
 	--skipLibCheck true
