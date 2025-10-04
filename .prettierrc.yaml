@@ -12,6 +12,6 @@ singleAttributePerLine: true
 overrides:
   - files:
       - README.md
-      - test.md
+      - neo.md
     options:
       parser: html
