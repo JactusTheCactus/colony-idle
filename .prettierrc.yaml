@@ -13,5 +13,6 @@ overrides:
   - files:
       - README.md
       - neo.md
+      - neo.min.md
     options:
       parser: html
