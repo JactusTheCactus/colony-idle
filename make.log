@@ -2,12 +2,8 @@ chmod -R +x clean.pl mini.sh
 npx tsc module.d.ts \
 	--target esnext \
 	--skipLibCheck true
-node page.js neo.html
-node page.js neo.md
 npx prettier . --write
 ./clean.pl
 ./mini.sh
-neo.html 142ms
-neo.md 41ms
-neo.min.html 98ms
-neo.min.md 7ms
+.github/actions/main/action.yml 11ms
+.github/actions/pre/action.yml 2ms
