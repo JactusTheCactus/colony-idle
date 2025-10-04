@@ -1,18 +1,70 @@
 $mono: "Noto Sans Mono", monospace;
-$serif: "Noto Serif", serif;
 $sans: "Noto Sans", sans-serif;
+$serif: "Noto Serif", serif;
+
 body {
 	font: 20px $sans;
+
 	.mono {
 		font-family: $mono;
 	}
-	.serif {
-		font-family: $serif;
-	}
+
 	.sans {
 		font-family: $sans;
 	}
+
+	.serif {
+		font-family: $serif;
+	}
+
 	.table-wrapper {
 		overflow-x: auto;
+
+		table {
+			td {
+				text-align: center;
+				position: relative;
+				overflow: visible;
+				padding: 0.25em;
+			}
+
+			th {
+				@extend td;
+				background: inherit;
+				z-index: 1;
+			}
+		}
+	}
+
+	abbr {
+		text-decoration: none;
+
+		&[title] {
+			position: relative;
+			display: inline-block;
+
+			&:hover {
+				color: transparent;
+
+				&::after {
+					content: attr(title);
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					color: initial;
+					white-space: nowrap;
+					padding: 0 2px;
+					z-index: 1;
+				}
+			}
+		}
+	}
+
+	q.ipa {
+		&::before,
+		&::after {
+			content: "/";
+		}
 	}
 }

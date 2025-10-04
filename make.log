@@ -1,6 +1,21 @@
-chmod -R +x clean.pl make.sh mini.sh
-npx tsc module.d.ts \
-	--target esnext \
-	--skipLibCheck true
-npx prettier . --write
-./clean.pl./mini.sh
+.github/actions/main/action.yml 19ms (unchanged)
+.github/actions/post/action.yml 4ms (unchanged)
+.github/actions/pre/action.yml 6ms (unchanged)
+.github/workflows/make.yml 6ms (unchanged)
+.prettierrc.yaml 6ms (unchanged)
+.vscode/tasks.json 58ms
+index.html 49ms (unchanged)
+module.d.ts 125ms (unchanged)
+neo.css 236ms (unchanged)
+neo.html 838ms (unchanged)
+neo.md 550ms (unchanged)
+neo.scss 54ms (unchanged)
+package-lock.json 75ms (unchanged)
+package.json 3ms (unchanged)
+page.js 92ms (unchanged)
+page.ts 95ms (unchanged)
+README.md 91ms (unchanged)
+script.js 236ms (unchanged)
+script.ts 257ms (unchanged)
+style.css 18ms (unchanged)
+style.scss 34ms (unchanged)

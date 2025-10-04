@@ -32,7 +32,7 @@
 	pos = {
 		solo: "\u{0325}",
 		init: "\u{032D}",
-		medi: "\u{032F}",
+		medi: "\u{0323}",
 		fina: "\u{032C}",
 	}
 -
@@ -174,14 +174,17 @@
 			)
 		})
 	})
-- space = " "
+-
+	space = " "
+-
+	str = fmt("S_ra'tik")
+-
+	cas = fmt("K^a*s*k*a*d*i*k$")
 -
 	neo = [
-		"S_ra'tik",
-		"Kaskadik"
+		str,
+		cas
 	]
-- str = fmt("S_ra'tik")
-- cas = fmt("K^a*s*k*a*d*i*k$")
 -
 	phonemes = {
 		a:"a",
@@ -215,13 +218,15 @@
 		u__:"ue",
 		v:"v",
 		w:"w",
-		x:"[null]",
+		x:"",
 		y:"y",
 		z:"z",
 		z_:"zh"
 	}
 mixin abbr(name,tip)
-	abbr(title=tip) #{name}
+	abbr(title=tip)= name
+-
+	ring = "\u{25CC}"
 doctype html
 html
 	head
@@ -230,8 +235,15 @@ html
 			rel="stylesheet"
 			href="neo.css"
 		)
+		meta(
+			charset="UTF-8"
+		)
+		meta(
+			name="viewport"
+			content="width=device-width, initial-scale=1"
+		)
 	body
-		section#stratic.mono
+		#stratic.mono
 			h1: +abbr(str,"Stratic")
 			.table-wrapper: table
 				-
@@ -285,14 +297,18 @@ html
 									lower(v || c) || upper("V")
 								].join(""))
 							if !v && !c
-								th= pair
+								th
+									= pair
 							else if !v && c
-								th: abbr(title=capitalize((phonemes[c.toLowerCase()]).replace(phonemes.x,(phonemes.x.toUpperCase()))))= pair
+								th
+									+abbr(pair,capitalize((phonemes[c.toLowerCase()]).replace(phonemes.x,(phonemes.x.toUpperCase()))))
 							else if v && !c
-								th: abbr(title=capitalize(phonemes[v.toLowerCase()]))= pair
+								th
+									+abbr(pair,capitalize(phonemes[v.toLowerCase()]))
 							else
-								td: abbr(title=capitalize([phonemes[c.toLowerCase()],phonemes[v.toLowerCase()]].join("").replace(phonemes.x,"")))= fmt(pair+"'")
-		section#cascadic.serif
+								td
+									+abbr(fmt(pair+"'"),capitalize([phonemes[c.toLowerCase()],phonemes[v.toLowerCase()]].join("").replace(phonemes.x,"")))
+		#cascadic.serif
 			h1: +abbr(cas,"Cascadic")
 			-
 				consonants = [
@@ -341,7 +357,7 @@ html
 				]
 			for i in set
 				h2= i[0]
-				table
+				.table-wrapper: table
 					tr
 						for p in Object.keys(pos)
 							th= p
@@ -350,35 +366,33 @@ html
 						tr
 							for l in letters
 								td: abbr(title=capitalize(phonemes[c.toLowerCase()]))= l
-		section#notes.sans
+		#notes.sans
 			h1 Notes
 			ol
 				li
-					| For both scripts, diacritics#{space}
+					| For both scripts,#{space}
 					em
-						| (other than the#{space}
+						q Above
+						| #{space}diacritics
+					| #{space}create separate phonemes; not variants &#{space}
+					em
 						q Below
-						| #{space}diacritics)
-					| #{space}create separate letters, not variants
-				li
-					| in#{space}
-					+abbr(str,"Stratic")
-					| , the#{space}
-					q Ogonek
-					| #{space}marks emphasis, though it is absent from#{space}
-					+abbr(cas,"Cascadic")
+						| #{space}diacritics
+					| #{space}encode semantic meaning
 				li
 					q: abbr(title="Th") #{fmt("T_")}
 					| #{space}&#{space}
 					q: abbr(title="Dh") #{fmt("D_")}
 					| #{space}are separate phonemes, differing in voicing (
-					code /#{"\u03B8"}/
+					q.ipa= "\u03B8"
 					| #{space}&#{space}
-					code /#{fmt("d_")}/
+					q.ipa= fmt("d_")
 					| )
 				li
-					q #{"\u{25CC}\u{0328}"}
-					| #{space}is the Emphasis mark, though is absent from#{space}
+					q #{`${ring}\u{0328}`}
+					| #{space}is the Emphasis mark in #{space}
+					+abbr(str+",","Stratic")
+					| #{space} though it is absent from#{space}
 					+abbr(cas,"Cascadic")
 				li
 					+abbr(str,"Stratic")
@@ -393,6 +407,7 @@ html
 					+abbr(cas,"Cascadic")
 					| #{space}is an Alphabet
 				li
+					| Unlike most abugidas,#{space}
 					+abbr(str,"Stratic")
 					| #{space}consonants have no inherent vowel
 				li

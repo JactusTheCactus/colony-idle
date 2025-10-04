@@ -13,7 +13,7 @@
 	"tasks": [
 		{
 			"label": "Build",
-			"command": "make.sh",
+			"command": "./make.sh",
 			"group": {
 				"kind": "build",
 				"isDefault": true
