@@ -5,5 +5,5 @@ runs:
     - shell: bash
       run: |
         git add .
-        git commit -m "Commit Make changes" || :
+        git commit -m "Commit Make changes" || echo "No changes to commit"
         git push origin main
