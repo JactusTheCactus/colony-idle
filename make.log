@@ -3,5 +3,4 @@ npx tsc module.d.ts \
 	--target esnext \
 	--skipLibCheck true
 npx prettier . --write
-./clean.pl
-./mini.sh
+./clean.pl./mini.sh
