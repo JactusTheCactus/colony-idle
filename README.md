@@ -9,10 +9,10 @@
 	</head>
 	<body>
 		<h1>Colony Idle</h1>
-		<code>#Colony</code
-		>, <code>#Deity</code>, <code>#Fantasy</code>, <code>#Idle</code>, <code>#Incremental</code>, <code>#Management</code>, <code
-			>#Simulator</code
-		>
+		<code>#Colony</code>, <code>#Deity</code>,
+		<code>#Fantasy</code>, <code>#Idle</code>,
+		<code>#Incremental</code>, <code>#Management</code>,
+		<code>#Simulator</code>
 		<h2>Software</h2>
 		<dl>
 			<dt>OS</dt>
