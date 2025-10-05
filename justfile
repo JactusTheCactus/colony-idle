@@ -34,9 +34,6 @@ js :
 			--target esnext \
 			--skipLibCheck true \
 		&& echo "- \`$t\` => \`${t%.ts}.js\`" \
-	) done \
-	&& for d in *.d.js; do ( \
-		rm -rf "$d" \
 	) done
 pages :
 	echo "### HTML & MD"
