@@ -10,10 +10,15 @@
 		"revealProblems": "onProblem",
 		"close": true
 	},
+	"options": {
+		"env": {
+			"FORCE_COLOR": "1"
+		}
+	},
 	"tasks": [
 		{
 			"label": "Build",
-			"command": "./make.sh",
+			"command": "./build.sh",
 			"group": {
 				"kind": "build",
 				"isDefault": true

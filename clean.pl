@@ -26,7 +26,7 @@ my @re = (
 		[qr/&gt;/, ">"]
 	],
 	[
-		"make.log",
+		"just.log",
 		[qr/.*? \d+ms \(unchanged\)/, ""],
 		[qr/\n+/, "\n"],
 		[qr/^\n|\n$/, ""]
