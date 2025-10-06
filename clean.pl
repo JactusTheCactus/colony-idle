@@ -25,12 +25,12 @@ my @re = (
 		[qr/&amp;/, "&"],
 		[qr/&gt;/, ">"]
 	],
-	[
-		"justLog.md",
-		[qr/.*? \d+ms \(unchanged\)/, ""],
-		[qr/\n+/, "\n"],
-		[qr/^\n|\n$/, ""]
-	]
+	# [
+		# "log.md",
+		# [qr/.*? \d+ms \(unchanged\)/, ""],
+		# [qr/\n+/, "\n"],
+		# [qr/^\n|\n$/, ""]
+	# ]
 );
 foreach my $r (@re) {
 	inplace_substitutions(@$r)

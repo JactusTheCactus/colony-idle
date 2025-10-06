@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
 set -e
-for f in neo; do
-	npx html-minifier --collapse-whitespace --remove-comments "$f.html" -o "$f.min.html"
-	for m in "" ".min"; do
-		cp "$f$m.html" "$f$m.md"
-	done
+for f in neo/neo index; do
+	npx html-minifier --collapse-whitespace --remove-comments "$f.html" -o "$f.html"
+	cp "$f.html" "$f.md"
 done
