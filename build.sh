@@ -3,6 +3,9 @@ TRUE=0
 FALSE=1
 LOG="log.md"
 RUNNING=$FALSE
+if [ -f dev.sh ]; then
+	source dev.sh
+fi
 isTrue() {
 	[ $1 -eq 0 ]
 }
