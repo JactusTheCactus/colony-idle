@@ -2,6 +2,7 @@
 TRUE=0
 FALSE=1
 LOG="log.md"
+RUNNING=$FALSE
 isTrue() {
 	[ $1 -eq 0 ]
 }
@@ -74,7 +75,9 @@ all() {
 		# css
 		# js
 		# pages
-		python
+		if isTrue $RUNNING; then
+			python
+		fi
 	}
 	post() {
 		format() {
