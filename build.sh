@@ -75,9 +75,9 @@ all() {
 			python3.12 main.py
 		}
 		logHead "## Main"
-		# css
-		# js
-		# pages
+		css
+		js
+		pages
 		if isTrue $RUNNING; then
 			python
 		fi
@@ -93,8 +93,8 @@ all() {
 		format
 	}
 	logHead "# Build"
-	# pre
+	pre
 	main
-	# post
+	post
 }
 all
