@@ -9,5 +9,8 @@ runs:
         sudo apt update
         sudo apt install -y just
         npm ci
+        python3 -m venv vEnv
+        source vEnv/bin/activate
+        pip install PySide6
         git config user.email "github-actions[bot]@users.noreply.github.com"
         git config user.name "GitHub Actions Bot"
