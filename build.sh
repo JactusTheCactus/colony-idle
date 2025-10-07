@@ -1,27 +1,19 @@
 #!/usr/bin/env bash
-TRUE=0
-FALSE=1
 LOG="log.md"
-RUNNING=$FALSE
-if [ -f dev.sh ]; then
-	source dev.sh
-fi
-isTrue() {
-	[ $1 -eq 0 ]
-}
-ifLog() {
-	[[ -f $LOG ]]
-}
-LOGGING=$FALSE
-if isTrue $LOGGING; then
-	exec > $LOG
+if [ -f .bash/dev.sh ]; then
+	DEV=true
 else
-	if ifLog; then
-		rm -rf $LOG
-	fi
+	DEV=false
+fi
+LOGGING=false
+if $LOGGING; then
+	exec > $LOG 2>&1
+	[[ -f $LOG ]] \
+	&& rm -rf $LOG \
+	&& touch $LOG
 fi
 logHead() {
-	if ifLog; then
+	if [[ -f $LOG ]]; then
 		echo "$1"
 	fi
 }
@@ -30,7 +22,17 @@ all() {
 		logHead "## Pre"
 		perms() {
 			logHead "### Perms"
-			chmod -R +x *.pl *.sh || true
+			EXT=( \
+				pl \
+				sh \
+				py \
+			)
+			shopt -s globstar nullglob
+			for e in ${EXT[@]}; do
+				for f in **/*.$e; do
+					[ -f $f ] && chmod +x $f
+				done
+			done
 		}
 		perms
 	}
@@ -72,13 +74,15 @@ all() {
 		python() {
 			source vEnv/bin/activate
 			cd app
-			python3.12 main.py
+			./main.py
 		}
 		logHead "## Main"
-		css
-		js
-		pages
-		if isTrue $RUNNING; then
+		if ! $DEV; then
+			css
+			js
+			pages
+		fi
+		if $DEV; then
 			python
 		fi
 	}
@@ -95,6 +99,8 @@ all() {
 	logHead "# Build"
 	pre
 	main
-	post
+	if ! $DEV; then
+		post
+	fi
 }
 all

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from PySide6.QtCore import QObject, Signal, Slot, Property, QUrl
 from PySide6.QtQml import QQmlApplicationEngine
 from PySide6.QtGui import QGuiApplication
